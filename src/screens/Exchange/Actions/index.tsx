@@ -1,12 +1,12 @@
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import cn from "classnames";
-import styles from "./Actions.module.sass";
-import Icon from "@/components/Icon";
-import Form from "./Form";
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import cn from 'classnames';
+import styles from './Actions.module.sass';
+import Icon from '@/components/Icon';
+import Form from './Form';
 
-const navigation = ["Limit", "Stop-limit", "Market"];
+const navigation = ['Limit', 'Stop-limit', 'Market'];
 
 const Actions = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -78,13 +78,13 @@ const Actions = () => {
       </div>
       <div className={styles.btns}>
         <button
-          className={cn("button-green button-small", styles.button)}
+          className={cn('button-green button-small', styles.button)}
           onClick={() => handleClickBuy()}
         >
           Buy
         </button>
         <button
-          className={cn("button-red button-small", styles.button)}
+          className={cn('button-red button-small', styles.button)}
           onClick={() => handleClickSell()}
         >
           Sell

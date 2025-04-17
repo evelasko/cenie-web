@@ -1,103 +1,96 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Panel.module.sass";
-import Link from "next/link";
-import { AreaChart, Area, ResponsiveContainer } from "recharts";
-import Dropdown from "@/components/Dropdown";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Panel.module.sass';
+import Link from 'next/link';
+import { AreaChart, Area, ResponsiveContainer } from 'recharts';
+import Dropdown from '@/components/Dropdown';
 
-const navigation = [
-  "Cryptocurrencies",
-  "DeFi",
-  "Innovation",
-  "POS",
-  "NFT",
-  "POW",
-];
+const navigation = ['Cryptocurrencies', 'DeFi', 'Innovation', 'POS', 'NFT', 'POW'];
 
 const currency = [
   {
-    title: "BTC/USDT",
-    price: "36,641.20",
-    currency: "36,641.20",
-    positive: "+0.79%",
-    image: "/images/content/currency/bitcoin.svg",
-    url: "/exchange",
+    title: 'BTC/USDT',
+    price: '36,641.20',
+    currency: '36,641.20',
+    positive: '+0.79%',
+    image: '/images/content/currency/bitcoin.svg',
+    url: '/exchange',
   },
   {
-    title: "ETH/USDT",
-    price: "36,641.20",
-    currency: "36,641.20",
-    positive: "+2.96%",
-    image: "/images/content/currency/ethereum.svg",
-    url: "/exchange",
+    title: 'ETH/USDT',
+    price: '36,641.20',
+    currency: '36,641.20',
+    positive: '+2.96%',
+    image: '/images/content/currency/ethereum.svg',
+    url: '/exchange',
   },
   {
-    title: "ATC/USDT",
-    price: "41.20",
-    currency: "41.20",
-    positive: "+0.79%",
-    negative: "-0.79%",
-    image: "/images/content/currency/maid.svg",
-    url: "/exchange",
+    title: 'ATC/USDT',
+    price: '41.20',
+    currency: '41.20',
+    positive: '+0.79%',
+    negative: '-0.79%',
+    image: '/images/content/currency/maid.svg',
+    url: '/exchange',
   },
 ];
 
 const data = [
   {
-    name: "1",
+    name: '1',
     price: 1000,
   },
   {
-    name: "2",
+    name: '2',
     price: 2300,
   },
   {
-    name: "3",
+    name: '3',
     price: 2000,
   },
   {
-    name: "4",
+    name: '4',
     price: 2780,
   },
   {
-    name: "5",
+    name: '5',
     price: 1890,
   },
   {
-    name: "6",
+    name: '6',
     price: 2390,
   },
   {
-    name: "7",
+    name: '7',
     price: 2490,
   },
   {
-    name: "8",
+    name: '8',
     price: 3000,
   },
   {
-    name: "9",
+    name: '9',
     price: 2500,
   },
   {
-    name: "10",
+    name: '10',
     price: 2000,
   },
   {
-    name: "11",
+    name: '11',
     price: 2780,
   },
   {
-    name: "12",
+    name: '12',
     price: 1890,
   },
   {
-    name: "13",
+    name: '13',
     price: 2390,
   },
   {
-    name: "14",
+    name: '14',
     price: 1490,
   },
 ];
@@ -118,12 +111,8 @@ const Panel = () => {
               <div className={styles.details}>
                 <div className={styles.line}>
                   <div className={styles.title}>{x.title}</div>
-                  {x.positive && (
-                    <div className={styles.positive}>{x.positive}</div>
-                  )}
-                  {x.negative && (
-                    <div className={styles.negative}>{x.negative}</div>
-                  )}
+                  {x.positive && <div className={styles.positive}>{x.positive}</div>}
+                  {x.negative && <div className={styles.negative}>{x.negative}</div>}
                 </div>
                 <div className={styles.price}>{x.price}</div>
                 <div className={styles.currency}>{x.currency}</div>
@@ -142,23 +131,9 @@ const Panel = () => {
                     }}
                   >
                     <defs>
-                      <linearGradient
-                        id="colorPrice"
-                        x1="0"
-                        y1="0"
-                        x2="0"
-                        y2="1"
-                      >
-                        <stop
-                          offset="5%"
-                          stopColor="#45B36B"
-                          stopOpacity={0.6}
-                        />
-                        <stop
-                          offset="95%"
-                          stopColor="#45B36B"
-                          stopOpacity={0}
-                        />
+                      <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#45B36B" stopOpacity={0.6} />
+                        <stop offset="95%" stopColor="#45B36B" stopOpacity={0} />
                       </linearGradient>
                     </defs>
                     <Area
@@ -189,10 +164,7 @@ const Panel = () => {
             </button>
           ))}
         </div>
-        <Link
-          className={cn("button-stroke button-small", styles.button)}
-         href="/theme/exchange"
-        >
+        <Link className={cn('button-stroke button-small', styles.button)} href="/theme/exchange">
           Trade
         </Link>
         <Dropdown

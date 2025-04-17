@@ -1,37 +1,37 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Borrow.module.sass";
-import Icon from "@/components/Icon";
-import TextInput from "@/components/TextInput";
-import Dropdown from "@/components/Dropdown";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Borrow.module.sass';
+import Icon from '@/components/Icon';
+import TextInput from '@/components/TextInput';
+import Dropdown from '@/components/Dropdown';
 
-const coinOptions = ["ETH Ethereum", "BTC Bitcoin", "TRX Tron"];
+const coinOptions = ['ETH Ethereum', 'BTC Bitcoin', 'TRX Tron'];
 
 const items = [
   {
-    title: "Hourly Interest Rate:",
-    price: "0.00208333%",
-    note: "0.00208333%",
+    title: 'Hourly Interest Rate:',
+    price: '0.00208333%',
+    note: '0.00208333%',
   },
   {
-    title: "Borrowed:",
-    price: "0.00000000 ETH",
+    title: 'Borrowed:',
+    price: '0.00000000 ETH',
   },
   {
-    title: "Maximum Borrow Amount:",
-    price: "0.00000000 ETH",
+    title: 'Maximum Borrow Amount:',
+    price: '0.00000000 ETH',
   },
 ];
 
-const percent = ["25%", "50%", "75%", "100%"];
+const percent = ['25%', '50%', '75%', '100%'];
 
 const Borrow = () => {
   const [coin, setCoin] = useState(coinOptions[0]);
 
   return (
     <div className={styles.borrow}>
-      <div className={cn("h4", styles.title)}>
+      <div className={cn('h4', styles.title)}>
         <Icon name="arrow-left" size={32} />
         Borrow
       </div>
@@ -64,18 +64,14 @@ const Borrow = () => {
           note="2.14646231064565653 ETH available"
           required
         />
-        <button className={cn("button-stroke button-small", styles.button)}>
-          100%
-        </button>
+        <button className={cn('button-stroke button-small', styles.button)}>100%</button>
       </div>
       <div className={styles.percent}>
         {percent.map((x, index) => (
-          <button className={cn("button-stroke button-small", styles.button)}>
-            {x}
-          </button>
+          <button className={cn('button-stroke button-small', styles.button)}>{x}</button>
         ))}
       </div>
-      <button className={cn("button", styles.button)}>Confirm borrow</button>
+      <button className={cn('button', styles.button)}>Confirm borrow</button>
     </div>
   );
 };

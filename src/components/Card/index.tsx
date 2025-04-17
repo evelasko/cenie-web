@@ -1,7 +1,7 @@
-import cn from "classnames";
-import styles from "./Card.module.sass";
-import Play from "@/components/Play";
-import Link from "next/link";
+import cn from 'classnames';
+import styles from './Card.module.sass';
+import Play from '@/components/Play';
+import Link from 'next/link';
 
 const Card = ({ className, item }: { className: string; item: any }) => {
   return (
@@ -10,15 +10,15 @@ const Card = ({ className, item }: { className: string; item: any }) => {
         {item.categoryText && (
           <div
             className={cn(
-              "category",
+              'category',
               {
-                "category-purple": item.category === "purple",
+                'category-purple': item.category === 'purple',
               },
               {
-                "category-green": item.category === "green",
+                'category-green': item.category === 'green',
               },
               {
-                "category-blue": item.category === "blue",
+                'category-blue': item.category === 'blue',
               },
               styles.category
             )}
@@ -39,7 +39,7 @@ const Card = ({ className, item }: { className: string; item: any }) => {
           <div
             className={cn(
               {
-                "category-stroke-green": item.status === "green",
+                'category-stroke-green': item.status === 'green',
               },
               styles.status
             )}

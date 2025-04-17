@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import TwoFa from "@/screens/TwoFa";
+import Page from '@/components/Page';
+import TwoFa from '@/screens/TwoFa';
 
 export default function TwoFaPage() {
   return (
@@ -7,4 +7,4 @@ export default function TwoFaPage() {
       <TwoFa />
     </Page>
   );
-} 
+}

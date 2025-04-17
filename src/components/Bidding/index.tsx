@@ -1,7 +1,7 @@
-import Link from "next/link";
-import cn from "classnames";
-import styles from "./Bidding.module.sass";
-import Icon from "@/components/Icon";
+import Link from 'next/link';
+import cn from 'classnames';
+import styles from './Bidding.module.sass';
+import Icon from '@/components/Icon';
 
 type BiddingProps = {
   title: string;
@@ -13,10 +13,10 @@ const Bidding = ({ title, items, children, activeIndex }: BiddingProps) => {
   return (
     <div className={styles.bidding}>
       <div className={styles.head}>
-        <div className={cn("container", styles.container)}>
-          <h2 className={cn("h2", styles.title)}>{title}</h2>
+        <div className={cn('container', styles.container)}>
+          <h2 className={cn('h2', styles.title)}>{title}</h2>
           <div className={styles.info}>
-            How to buy crypto on Bitcloud{" "}
+            How to buy crypto on Bitcloud{' '}
             <Link className={styles.link} href="/learn-crypto">
               Learn now <Icon name="arrow-right" size={20} />
             </Link>
@@ -24,7 +24,7 @@ const Bidding = ({ title, items, children, activeIndex }: BiddingProps) => {
         </div>
       </div>
       <div className={styles.body}>
-        <div className={cn("container", styles.container)}>
+        <div className={cn('container', styles.container)}>
           <div className={styles.steps}>
             {items.map((x, index) => (
               <div

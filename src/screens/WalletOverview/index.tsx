@@ -1,18 +1,18 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./WalletOverview.module.sass";
-import Wallet from "@/components/Wallet";
-import Icon from "@/components/Icon";
-import Dropdown from "@/components/Dropdown";
-import AccountBalances from "./AccountBalances";
-import AssetBalances from "./AssetBalances";
-import Integrations from "./Integrations";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './WalletOverview.module.sass';
+import Wallet from '@/components/Wallet';
+import Icon from '@/components/Icon';
+import Dropdown from '@/components/Dropdown';
+import AccountBalances from './AccountBalances';
+import AssetBalances from './AssetBalances';
+import Integrations from './Integrations';
 
-const optionsCurrency = ["USD", "EUR", "RUB"];
+const optionsCurrency = ['USD', 'EUR', 'RUB'];
 
 const WalletOverview = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
   const [currency, setCurrency] = useState(optionsCurrency[0]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -24,18 +24,14 @@ const WalletOverview = () => {
     <Wallet>
       <div className={styles.top}>
         <div className={styles.line}>
-          <h4 className={cn("h4", styles.title)}>Overview</h4>
+          <h4 className={cn('h4', styles.title)}>Overview</h4>
           <div className={styles.wrap}>
-            <form
-              className={styles.form}
-              action=""
-              onSubmit={handleSubmit}
-            >
+            <form className={styles.form} action="" onSubmit={handleSubmit}>
               <input
                 className={styles.input}
                 type="text"
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={e => setSearch(e.target.value)}
                 name="search"
                 placeholder="Search coin"
                 required
@@ -51,16 +47,14 @@ const WalletOverview = () => {
               setValue={setCurrency}
               options={optionsCurrency}
             />
-            <button className={cn("button-black button-small", styles.button)}>
-              Show balance
-            </button>
+            <button className={cn('button-black button-small', styles.button)}>Show balance</button>
           </div>
         </div>
         <div className={styles.details}>
           <div className={styles.info}>Total balance</div>
           <div className={styles.currency}>
             <div className={styles.number}>0.27894652</div>
-            <div className={cn("category-green", styles.category)}>BTC</div>
+            <div className={cn('category-green', styles.category)}>BTC</div>
           </div>
           <div className={styles.price}>$10,098.36</div>
         </div>

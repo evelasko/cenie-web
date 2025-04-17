@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import Referrals from "@/screens/Referrals";
+import Page from '@/components/Page';
+import Referrals from '@/screens/Referrals';
 
 export default function ReferralsPage() {
   return (
@@ -7,4 +7,4 @@ export default function ReferralsPage() {
       <Referrals />
     </Page>
   );
-} 
+}

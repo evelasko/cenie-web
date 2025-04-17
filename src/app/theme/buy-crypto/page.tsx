@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import BuyCrypto from "@/screens/BuyCrypto";
+import Page from '@/components/Page';
+import BuyCrypto from '@/screens/BuyCrypto';
 
 export default function BuyCryptoPage() {
   return (
@@ -7,4 +7,4 @@ export default function BuyCryptoPage() {
       <BuyCrypto />
     </Page>
   );
-} 
+}

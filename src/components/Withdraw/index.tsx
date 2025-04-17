@@ -1,11 +1,11 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Withdraw.module.sass";
-import Icon from "@/components/Icon";
-import TextInput from "@/components/TextInput";
-import Checkbox from "@/components/Checkbox";
-import Successfully from "./Successfully";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Withdraw.module.sass';
+import Icon from '@/components/Icon';
+import TextInput from '@/components/TextInput';
+import Checkbox from '@/components/Checkbox';
+import Successfully from './Successfully';
 
 const Withdraw = () => {
   const [save, setSave] = useState(true);
@@ -21,7 +21,7 @@ const Withdraw = () => {
     <>
       {visibleWithdraw && (
         <div className={styles.withdraw}>
-          <div className={cn("h4", styles.title)}>
+          <div className={cn('h4', styles.title)}>
             <Icon name="arrow-left" size={32} />
             Withdraw USDT
           </div>
@@ -59,9 +59,7 @@ const Withdraw = () => {
               note="$1,000,000.00 daily withdrawal limit remaining."
               required
             />
-            <button className={cn("button-stroke button-small", styles.button)}>
-              Max amount
-            </button>
+            <button className={cn('button-stroke button-small', styles.button)}>Max amount</button>
           </div>
           <TextInput
             className={styles.field}
@@ -79,10 +77,7 @@ const Withdraw = () => {
             placeholder="0.00000000 USDT"
             required
           />
-          <button
-            className={cn("button", styles.button)}
-            onClick={() => handleClick()}
-          >
+          <button className={cn('button', styles.button)} onClick={() => handleClick()}>
             Withdraw
           </button>
         </div>

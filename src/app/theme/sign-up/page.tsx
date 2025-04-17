@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import SignUp from "@/screens/SignUp";
+import Page from '@/components/Page';
+import SignUp from '@/screens/SignUp';
 
 export default function SignUpPage() {
   return (
@@ -7,4 +7,4 @@ export default function SignUpPage() {
       <SignUp />
     </Page>
   );
-} 
+}

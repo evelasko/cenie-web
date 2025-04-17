@@ -1,9 +1,9 @@
-"use client";
-import { useRef } from "react";
-import Main from "./Main";
-import Releases from "./Releases";
-import Catalog from "./Catalog";
-import News from "@/components/News";
+'use client';
+import { useRef } from 'react';
+import Main from './Main';
+import Releases from './Releases';
+import Catalog from './Catalog';
+import News from '@/components/News';
 
 const LearnCrypto = () => {
   const scrollToRef = useRef(null);

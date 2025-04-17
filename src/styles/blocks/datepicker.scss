@@ -5,15 +5,12 @@ $datepicker__muted-color: #ccc !default;
 $datepicker__selected-color: $n6 !default;
 $datepicker__text-color: #000 !default;
 $datepicker__header-color: #000 !default;
-$datepicker__navigation-disabled-color: lighten(
-  $datepicker__muted-color,
-  10%
-) !default;
+$datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 10%) !default;
 
 $datepicker__border-radius: 0;
 $datepicker__day-margin: 0 !default;
 $datepicker__font-size: 0.8rem !default;
-$datepicker__font-family: "Poppins", sans-serif;
+$datepicker__font-family: 'Poppins', sans-serif;
 $datepicker__item-size: 40px !default;
 $datepicker__margin: 0.4rem !default;
 $datepicker__navigation-button-size: 32px !default;
@@ -23,7 +20,7 @@ $datepicker__triangle-size: 8px !default;
   border-color: $datepicker__muted-color;
   border-style: solid;
   border-width: 3px 3px 0 0;
-  content: "";
+  content: '';
   display: block;
   height: 9px;
   position: absolute;
@@ -49,7 +46,7 @@ $datepicker__triangle-size: 8px !default;
     border: $datepicker__triangle-size solid transparent;
     height: 0;
     width: 1px;
-    content: "";
+    content: '';
     z-index: -1;
     border-width: $datepicker__triangle-size;
     left: -$datepicker__triangle-size;
@@ -149,7 +146,7 @@ $datepicker__triangle-size: 8px !default;
 .react-datepicker-popper {
   z-index: 1;
 
-  &[data-placement^="bottom"] {
+  &[data-placement^='bottom'] {
     padding-top: $datepicker__triangle-size + 2px;
 
     .react-datepicker__triangle {
@@ -157,15 +154,15 @@ $datepicker__triangle-size: 8px !default;
     }
   }
 
-  &[data-placement="bottom-end"],
-  &[data-placement="top-end"] {
+  &[data-placement='bottom-end'],
+  &[data-placement='top-end'] {
     .react-datepicker__triangle {
       left: auto;
       right: 50px;
     }
   }
 
-  &[data-placement^="top"] {
+  &[data-placement^='top'] {
     padding-bottom: $datepicker__triangle-size + 2px;
 
     .react-datepicker__triangle {
@@ -173,7 +170,7 @@ $datepicker__triangle-size: 8px !default;
     }
   }
 
-  &[data-placement^="right"] {
+  &[data-placement^='right'] {
     padding-left: $datepicker__triangle-size;
 
     .react-datepicker__triangle {
@@ -182,7 +179,7 @@ $datepicker__triangle-size: 8px !default;
     }
   }
 
-  &[data-placement^="left"] {
+  &[data-placement^='left'] {
     padding-right: $datepicker__triangle-size;
 
     .react-datepicker__triangle {
@@ -383,13 +380,13 @@ $datepicker__triangle-size: 8px !default;
         width: auto;
       }
 
-      input[type="time"]::-webkit-inner-spin-button,
-      input[type="time"]::-webkit-outer-spin-button {
+      input[type='time']::-webkit-inner-spin-button,
+      input[type='time']::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
       }
 
-      input[type="time"] {
+      input[type='time'] {
         -moz-appearance: textfield;
       }
     }
@@ -796,7 +793,7 @@ $datepicker__triangle-size: 8px !default;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
-    content: "\00d7";
+    content: '\00d7';
   }
 }
 

@@ -1,6 +1,6 @@
-import Main from "./Main";
-import Article from "./Article";
-import Catalog from "./Catalog";
+import Main from './Main';
+import Article from './Article';
+import Catalog from './Catalog';
 
 const LearnCrypto = () => {
   return (

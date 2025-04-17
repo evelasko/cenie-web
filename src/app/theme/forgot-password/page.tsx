@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import ForgotPassword from "@/screens/ForgotPassword";
+import Page from '@/components/Page';
+import ForgotPassword from '@/screens/ForgotPassword';
 
 export default function ForgotPasswordPage() {
   return (
@@ -7,4 +7,4 @@ export default function ForgotPasswordPage() {
       <ForgotPassword />
     </Page>
   );
-} 
+}

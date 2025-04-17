@@ -1,16 +1,16 @@
-import cn from "classnames";
-import styles from "./Main.module.sass";
+import cn from 'classnames';
+import styles from './Main.module.sass';
 
 const Main = () => {
   return (
     <div className={styles.main}>
-      <h4 className={cn("h4", styles.title)}>Margin</h4>
+      <h4 className={cn('h4', styles.title)}>Margin</h4>
       <div className={styles.list}>
         <div className={styles.item}>
           <div className={styles.info}>Total balance</div>
           <div className={styles.currency}>
             <div className={styles.number}>0.27894652</div>
-            <div className={cn("category-green", styles.category)}>BTC</div>
+            <div className={cn('category-green', styles.category)}>BTC</div>
           </div>
           <div className={styles.price}>$10,098.36</div>
         </div>
@@ -22,9 +22,7 @@ const Main = () => {
             <div className={styles.info}>Margin level</div>
             <div className={styles.currency}>
               <div className={styles.number}>999.00</div>
-              <div className={cn("category-green", styles.category)}>
-                low risk
-              </div>
+              <div className={cn('category-green', styles.category)}>low risk</div>
             </div>
           </div>
         </div>
@@ -32,7 +30,7 @@ const Main = () => {
           <div className={styles.stage}>Account Equity</div>
           <div className={styles.currency}>
             <div className={styles.number}>0.00000000</div>
-            <div className={cn("category-gray", styles.category)}>BTC</div>
+            <div className={cn('category-gray', styles.category)}>BTC</div>
           </div>
         </div>
       </div>

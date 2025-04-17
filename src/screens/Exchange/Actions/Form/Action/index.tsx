@@ -1,9 +1,9 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Action.module.sass";
-import { Range, getTrackBackground } from "react-range";
-import Icon from "@/components/Icon";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Action.module.sass';
+import { Range, getTrackBackground } from 'react-range';
+import Icon from '@/components/Icon';
 
 interface ActionProps {
   title: string;
@@ -15,15 +15,7 @@ interface ActionProps {
   buttonText: string;
 }
 
-const Action = ({
-  title,
-  content,
-  price,
-  stop,
-  limit,
-  classButton,
-  buttonText,
-}: ActionProps) => {
+const Action = ({ title, content, price, stop, limit, classButton, buttonText }: ActionProps) => {
   const [values, setValues] = useState([10]);
 
   const stepPrice = 10;
@@ -69,18 +61,17 @@ const Action = ({
         step={stepPrice}
         min={minPrice}
         max={maxPrice}
-        onChange={(values) => setValues(values)}
+        onChange={values => setValues(values)}
         renderMark={({ props, index }) => (
           <div
             {...props}
             style={{
               ...props.style,
-              height: "6px",
-              width: "2px",
-              marginTop: "-2px",
-              borderRadius: "1px",
-              backgroundColor:
-                index * stepPrice < values[0] ? "#3772FF" : "#E6E8EC",
+              height: '6px',
+              width: '2px',
+              marginTop: '-2px',
+              borderRadius: '1px',
+              backgroundColor: index * stepPrice < values[0] ? '#3772FF' : '#E6E8EC',
             }}
           />
         )}
@@ -90,24 +81,24 @@ const Action = ({
             onTouchStart={props.onTouchStart}
             style={{
               ...props.style,
-              height: "36px",
-              display: "flex",
-              width: "100%",
+              height: '36px',
+              display: 'flex',
+              width: '100%',
             }}
           >
             <div
               ref={props.ref}
               style={{
-                height: "2px",
-                width: "100%",
-                borderRadius: "1px",
+                height: '2px',
+                width: '100%',
+                borderRadius: '1px',
                 background: getTrackBackground({
                   values,
-                  colors: ["#3772FF", "#E6E8EC"],
+                  colors: ['#3772FF', '#E6E8EC'],
                   min: minPrice,
                   max: maxPrice,
                 }),
-                alignSelf: "center",
+                alignSelf: 'center',
               }}
             >
               {children}
@@ -119,29 +110,29 @@ const Action = ({
             {...props}
             style={{
               ...props.style,
-              height: "18px",
-              width: "18px",
-              borderRadius: "50%",
-              backgroundColor: "#F4F5F6",
-              border: "4px solid #777E90",
-              boxShadow: "0px 8px 16px -8px rgba(15, 15, 15, 0.2)",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              height: '18px',
+              width: '18px',
+              borderRadius: '50%',
+              backgroundColor: '#F4F5F6',
+              border: '4px solid #777E90',
+              boxShadow: '0px 8px 16px -8px rgba(15, 15, 15, 0.2)',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
           >
             <div
               style={{
-                position: "absolute",
-                top: "-27px",
-                color: "#FCFCFD",
-                fontWeight: "600",
-                fontSize: "13px",
-                lineHeight: "16px",
-                fontFamily: "Poppins",
-                padding: "2px 6px",
-                borderRadius: "6px",
-                backgroundColor: "#777E90",
+                position: 'absolute',
+                top: '-27px',
+                color: '#FCFCFD',
+                fontWeight: '600',
+                fontSize: '13px',
+                lineHeight: '16px',
+                fontFamily: 'Poppins',
+                padding: '2px 6px',
+                borderRadius: '6px',
+                backgroundColor: '#777E90',
               }}
             >
               {values[0].toFixed(0)}%

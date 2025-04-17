@@ -1,19 +1,23 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Catalog.module.sass";
-import Icon from "@/components/Icon";
-import Dropdown from "@/components/Dropdown";
-import Card from "@/components/Card";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Catalog.module.sass';
+import Icon from '@/components/Icon';
+import Dropdown from '@/components/Dropdown';
+import Card from '@/components/Card';
 
 // data
-import { articles } from "../../../mocks/articles";
+import { articles } from '../../../mocks/articles';
 
-const dateOptions = ["Recently added", "Long added"];
-const sortingOptions = ["Tutorial", "Usecase", "Trading", "Wallet"];
+const dateOptions = ['Recently added', 'Long added'];
+const sortingOptions = ['Tutorial', 'Usecase', 'Trading', 'Wallet'];
 
-const Catalog = ({ scrollToRefCatalog }: { scrollToRefCatalog: React.RefObject<HTMLDivElement> | React.RefObject<null> }) => {
-  const [email, setEmail] = useState("");
+const Catalog = ({
+  scrollToRefCatalog,
+}: {
+  scrollToRefCatalog: React.RefObject<HTMLDivElement> | React.RefObject<null>;
+}) => {
+  const [email, setEmail] = useState('');
   const [date, setDate] = useState(dateOptions[0]);
   const [sorting, setSorting] = useState(sortingOptions[0]);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -24,22 +28,19 @@ const Catalog = ({ scrollToRefCatalog }: { scrollToRefCatalog: React.RefObject<H
   };
 
   return (
-    <div
-      className={cn("section-padding section-mb0", styles.section)}
-      ref={scrollToRefCatalog}
-    >
-      <div className={cn("container", styles.container)}>
-        <form className={styles.form} action="" onSubmit={(e) => handleSubmit(e)}>
+    <div className={cn('section-padding section-mb0', styles.section)} ref={scrollToRefCatalog}>
+      <div className={cn('container', styles.container)}>
+        <form className={styles.form} action="" onSubmit={e => handleSubmit(e)}>
           <input
             className={styles.input}
             type="text"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
             name="search"
             placeholder="Search anything about crypto"
             required
           />
-          <button className={cn("button-circle", styles.result)}>
+          <button className={cn('button-circle', styles.result)}>
             <Icon name="search" size={24} />
           </button>
         </form>
@@ -65,7 +66,7 @@ const Catalog = ({ scrollToRefCatalog }: { scrollToRefCatalog: React.RefObject<H
               </button>
             ))}
           </div>
-          <div className={cn("tablet-show", styles.dropdown)}>
+          <div className={cn('tablet-show', styles.dropdown)}>
             <Dropdown
               className={styles.dropdown}
               value={sorting}
@@ -80,7 +81,7 @@ const Catalog = ({ scrollToRefCatalog }: { scrollToRefCatalog: React.RefObject<H
           ))}
         </div>
         <div className={styles.btns}>
-          <button className={cn("button-stroke button-small", styles.button)}>
+          <button className={cn('button-stroke button-small', styles.button)}>
             <span>Learn more</span>
             <Icon name="arrow-down" size={16} />
           </button>

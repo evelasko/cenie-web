@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import SessionsAndLoginHistory from "@/screens/SessionsAndLoginHistory";
+import Page from '@/components/Page';
+import SessionsAndLoginHistory from '@/screens/SessionsAndLoginHistory';
 
 export default function SessionsAndLoginHistoryPage() {
   return (
@@ -7,4 +7,4 @@ export default function SessionsAndLoginHistoryPage() {
       <SessionsAndLoginHistory />
     </Page>
   );
-} 
+}

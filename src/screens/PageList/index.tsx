@@ -1,11 +1,11 @@
-import Link from "next/link";
-import cn from "classnames";
-import styles from "./PageList.module.sass";
+import Link from 'next/link';
+import cn from 'classnames';
+import styles from './PageList.module.sass';
 
 const PageList = () => {
   return (
     <div className={styles.page}>
-      <div className={cn("container", styles.container)}>
+      <div className={cn('container', styles.container)}>
         <p>
           <Link href="/theme/">Home</Link>
         </p>
@@ -30,7 +30,7 @@ const PageList = () => {
         <p>
           <Link href="/theme/exchange">Exchange</Link>
         </p>
-        <p style={{ marginTop: "40px" }}>
+        <p style={{ marginTop: '40px' }}>
           <Link href="/theme/wallet-overview">Wallet overview</Link>
         </p>
         <p>
@@ -42,7 +42,7 @@ const PageList = () => {
         <p>
           <Link href="/theme/fiat-and-spot">Fiat and spot</Link>
         </p>
-        <p style={{ marginTop: "40px" }}>
+        <p style={{ marginTop: '40px' }}>
           <Link href="/theme/deposit-fiat">Deposit Fiat</Link>
         </p>
         <p>
@@ -51,7 +51,7 @@ const PageList = () => {
         <p>
           <Link href="/theme/sell-crypto">Sell Crypto</Link>
         </p>
-        <p style={{ marginTop: "40px" }}>
+        <p style={{ marginTop: '40px' }}>
           <Link href="/theme/profile-info">Profile info</Link>
         </p>
         <p>
@@ -69,7 +69,7 @@ const PageList = () => {
         <p>
           <Link href="/theme/change-password">Change password</Link>
         </p>
-        <p style={{ marginTop: "40px" }}>
+        <p style={{ marginTop: '40px' }}>
           <Link href="/theme/sign-in">Sign in</Link>
         </p>
         <p>

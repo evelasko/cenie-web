@@ -1,6 +1,6 @@
-import cn from "classnames";
-import Link from "next/link";
-import styles from "./Breadcrumbs.module.sass";
+import cn from 'classnames';
+import Link from 'next/link';
+import styles from './Breadcrumbs.module.sass';
 
 export type BreadcrumbItem = {
   title: string;

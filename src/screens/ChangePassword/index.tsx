@@ -1,16 +1,16 @@
-"use client";
-import { useState } from "react";
-import Profile from "@/components/Profile";
-import Form from "./Form";
-import Finish from "./Finish";
+'use client';
+import { useState } from 'react';
+import Profile from '@/components/Profile';
+import Form from './Form';
+import Finish from './Finish';
 
 const breadcrumbs = [
   {
-    title: "Home",
-    url: "/",
+    title: 'Home',
+    url: '/',
   },
   {
-    title: "Change password",
+    title: 'Change password',
   },
 ];
 

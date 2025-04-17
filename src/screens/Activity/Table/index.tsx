@@ -1,6 +1,6 @@
-import cn from "classnames";
-import styles from "./Table.module.sass";
-import Link from "next/link";
+import cn from 'classnames';
+import styles from './Table.module.sass';
+import Link from 'next/link';
 
 const Table = ({ className, items }: { className: string; items: any }) => {
   return (
@@ -26,16 +26,8 @@ const Table = ({ className, items }: { className: string; items: any }) => {
       {items.map((x: any, index: number) => (
         <Link className={styles.row} key={index} href={x.url}>
           <div className={styles.col}>
-            {x.withdrew && (
-              <div className={cn("category-blue", styles.category)}>
-                Withdrew
-              </div>
-            )}
-            {x.deposited && (
-              <div className={cn("category-green", styles.category)}>
-                Deposited
-              </div>
-            )}
+            {x.withdrew && <div className={cn('category-blue', styles.category)}>Withdrew</div>}
+            {x.deposited && <div className={cn('category-green', styles.category)}>Deposited</div>}
           </div>
           <div className={styles.col}>
             <div className={styles.item}>

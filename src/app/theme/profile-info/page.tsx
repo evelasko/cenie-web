@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import ProfileInfo from "@/screens/ProfileInfo";
+import Page from '@/components/Page';
+import ProfileInfo from '@/screens/ProfileInfo';
 
 export default function ProfileInfoPage() {
   return (
@@ -7,4 +7,4 @@ export default function ProfileInfoPage() {
       <ProfileInfo />
     </Page>
   );
-} 
+}

@@ -1,30 +1,30 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Actions.module.sass";
-import Link from "next/link";
-import Icon from "@/components/Icon";
-import Modal from "@/components/Modal";
-import Transfer from "@/components/Transfer";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Actions.module.sass';
+import Link from 'next/link';
+import Icon from '@/components/Icon';
+import Modal from '@/components/Modal';
+import Transfer from '@/components/Transfer';
 
 const items = [
   {
-    title: "Bank deposit",
+    title: 'Bank deposit',
     content:
-      "Deposit crypto or cash currency to your wallet and start trading on the world largest exchange!",
-    color: "#E4D7CF",
-    image: "/images/content/actions-pic-1.png",
-    image2x: "/images/content/actions-pic-1@2x.png",
-    buttonText: "Bank deposit",
-    url: "/deposit-fiat",
+      'Deposit crypto or cash currency to your wallet and start trading on the world largest exchange!',
+    color: '#E4D7CF',
+    image: '/images/content/actions-pic-1.png',
+    image2x: '/images/content/actions-pic-1@2x.png',
+    buttonText: 'Bank deposit',
+    url: '/deposit-fiat',
   },
   {
-    title: "Transfer",
-    content: "Internal transfers are free on Bitcloud.",
-    color: "#CDB4DB",
-    image: "/images/content/actions-pic-2.png",
-    image2x: "/images/content/actions-pic-2@2x.png",
-    buttonText: "Transfer coin",
+    title: 'Transfer',
+    content: 'Internal transfers are free on Bitcloud.',
+    color: '#CDB4DB',
+    image: '/images/content/actions-pic-2.png',
+    image2x: '/images/content/actions-pic-2@2x.png',
+    buttonText: 'Transfer coin',
   },
 ];
 
@@ -37,26 +37,20 @@ const Actions = ({ className }: { className: string }) => {
         <div className={styles.list}>
           {items.map((x, index) => (
             <div className={styles.item} key={index}>
-              <div
-                className={styles.preview}
-                style={{ backgroundColor: x.color }}
-              >
+              <div className={styles.preview} style={{ backgroundColor: x.color }}>
                 <img srcSet={`${x.image2x} 2x`} src={x.image} alt="Action" />
               </div>
               <div className={styles.details}>
                 <div className={styles.title}>{x.title}</div>
                 <div className={styles.content}>{x.content}</div>
                 {x.url ? (
-                  <Link
-                    className={cn("button-stroke button-small", styles.button)}
-                    href={x.url}
-                  >
+                  <Link className={cn('button-stroke button-small', styles.button)} href={x.url}>
                     <span>{x.buttonText}</span>
                     <Icon name="arrow-next" size={10} />
                   </Link>
                 ) : (
                   <button
-                    className={cn("button-stroke button-small", styles.button)}
+                    className={cn('button-stroke button-small', styles.button)}
                     onClick={() => setVisibleTransfer(true)}
                   >
                     <span>{x.buttonText}</span>
@@ -68,10 +62,7 @@ const Actions = ({ className }: { className: string }) => {
           ))}
         </div>
       </div>
-      <Modal
-        visible={visibleTransfer}
-        onClose={() => setVisibleTransfer(false)}
-      >
+      <Modal visible={visibleTransfer} onClose={() => setVisibleTransfer(false)}>
         <Transfer />
       </Modal>
     </>

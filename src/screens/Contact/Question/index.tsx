@@ -1,23 +1,19 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Question.module.sass";
-import Icon from "@/components/Icon";
-import Dropdown from "@/components/Dropdown";
-import TextInput from "@/components/TextInput";
-import TextArea from "@/components/TextArea";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Question.module.sass';
+import Icon from '@/components/Icon';
+import Dropdown from '@/components/Dropdown';
+import TextInput from '@/components/TextInput';
+import TextArea from '@/components/TextArea';
 
 const optionsCurrency = [
-  "Have a question about Bitcloud fees",
-  "Have a question about Ethereum fees",
-  "Have a question about Dogcoin fees",
+  'Have a question about Bitcloud fees',
+  'Have a question about Ethereum fees',
+  'Have a question about Dogcoin fees',
 ];
 
-const optionsCategory = [
-  "Transactions and spending",
-  "Transactions",
-  "Spending",
-];
+const optionsCategory = ['Transactions and spending', 'Transactions', 'Spending'];
 
 const Question = () => {
   const [currency, setCurrency] = useState(optionsCurrency[0]);
@@ -25,8 +21,8 @@ const Question = () => {
   const [topic, setTopic] = useState(true);
 
   return (
-    <div className={cn("section-bg section-mb0", styles.section)}>
-      <div className={cn("container", styles.container)}>
+    <div className={cn('section-bg section-mb0', styles.section)}>
+      <div className={cn('container', styles.container)}>
         <form className={styles.form} action="">
           <div className={styles.fieldset}>
             <div className={styles.field}>
@@ -41,10 +37,7 @@ const Question = () => {
                     checked={topic}
                   />
                   <span className={styles.inner}>
-                    <div
-                      className={styles.icon}
-                      style={{ backgroundColor: "#3772FF" }}
-                    >
+                    <div className={styles.icon} style={{ backgroundColor: '#3772FF' }}>
                       <Icon name="wallet" size={20} />
                     </div>
                     <span className={styles.text}>Wallet</span>
@@ -59,10 +52,7 @@ const Question = () => {
                     checked={!topic}
                   />
                   <span className={styles.inner}>
-                    <div
-                      className={styles.icon}
-                      style={{ backgroundColor: "#9757D7" }}
-                    >
+                    <div className={styles.icon} style={{ backgroundColor: '#9757D7' }}>
                       <Icon name="candlesticks" size={20} />
                     </div>
                     <span className={styles.text}>Exchange</span>
@@ -112,9 +102,7 @@ const Question = () => {
             />
           </div>
           <div className={styles.btns}>
-            <button className={cn("button-small", styles.button)}>
-              Send message
-            </button>
+            <button className={cn('button-small', styles.button)}>Send message</button>
           </div>
         </form>
       </div>

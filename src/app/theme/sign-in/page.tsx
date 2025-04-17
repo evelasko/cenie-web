@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import SignIn from "@/screens/SignIn";
+import Page from '@/components/Page';
+import SignIn from '@/screens/SignIn';
 
 export default function SignInPage() {
   return (
@@ -7,4 +7,4 @@ export default function SignInPage() {
       <SignIn />
     </Page>
   );
-} 
+}

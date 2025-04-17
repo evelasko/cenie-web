@@ -1,41 +1,41 @@
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import cn from "classnames";
-import OutsideClickHandler from "react-outside-click-handler";
-import styles from "./Notifications.module.sass";
-import Icon from "@/components/Icon";
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import cn from 'classnames';
+import OutsideClickHandler from 'react-outside-click-handler';
+import styles from './Notifications.module.sass';
+import Icon from '@/components/Icon';
 
 const items = [
   {
-    title: "Login attempted from new IP",
-    date: "2021-03-10 20:19:15",
-    url: "/notifications",
+    title: 'Login attempted from new IP',
+    date: '2021-03-10 20:19:15',
+    url: '/notifications',
   },
   {
-    title: "Request to reset security",
-    date: "2021-03-10 20:19:15",
-    url: "/notifications",
+    title: 'Request to reset security',
+    date: '2021-03-10 20:19:15',
+    url: '/notifications',
   },
   {
-    title: "Login attempted from new IP",
-    date: "2021-03-10 20:19:15",
-    url: "/notifications",
+    title: 'Login attempted from new IP',
+    date: '2021-03-10 20:19:15',
+    url: '/notifications',
   },
   {
-    title: "Request to reset security",
-    date: "2021-03-10 20:19:15",
-    url: "/notifications",
+    title: 'Request to reset security',
+    date: '2021-03-10 20:19:15',
+    url: '/notifications',
   },
   {
-    title: "Login attempted from new IP",
-    date: "2021-03-10 20:19:15",
-    url: "/notifications",
+    title: 'Login attempted from new IP',
+    date: '2021-03-10 20:19:15',
+    url: '/notifications',
   },
   {
-    title: "Request to reset security",
-    date: "2021-03-10 20:19:15",
-    url: "/notifications",
+    title: 'Request to reset security',
+    date: '2021-03-10 20:19:15',
+    url: '/notifications',
   },
 ];
 
@@ -49,10 +49,7 @@ const Notifications = ({ className }: { className: string }) => {
           [styles.active]: visible,
         })}
       >
-        <button
-          className={cn(styles.head, styles.active)}
-          onClick={() => setVisible(!visible)}
-        >
+        <button className={cn(styles.head, styles.active)} onClick={() => setVisible(!visible)}>
           <Icon name="bell" size={24} />
         </button>
         <div className={styles.body}>
@@ -72,15 +69,13 @@ const Notifications = ({ className }: { className: string }) => {
           </div>
           <div className={styles.btns}>
             <Link
-              className={cn("button-small", styles.button)}
+              className={cn('button-small', styles.button)}
               href="/notifications"
               onClick={() => setVisible(false)}
             >
               View all
             </Link>
-            <button className={cn("button-stroke button-small", styles.button)}>
-              Clear all
-            </button>
+            <button className={cn('button-stroke button-small', styles.button)}>Clear all</button>
           </div>
         </div>
       </div>

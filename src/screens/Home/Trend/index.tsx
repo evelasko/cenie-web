@@ -1,119 +1,111 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Trend.module.sass";
-import Link from "next/link";
-import Dropdown from "@/components/Dropdown";
-import { AreaChart, Area, ResponsiveContainer } from "recharts";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Trend.module.sass';
+import Link from 'next/link';
+import Dropdown from '@/components/Dropdown';
+import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 
-const navigation = [
-  "All",
-  "DeFi",
-  "Innovation",
-  "POS",
-  "NFT",
-  "POW",
-  "Storage",
-];
+const navigation = ['All', 'DeFi', 'Innovation', 'POS', 'NFT', 'POW', 'Storage'];
 
 const items = [
   {
-    title: "Bitcoin",
-    currency: "BTC",
-    price: "$36,201.34",
-    positive: "+1.71%",
-    image: "/images/content/currency/bitcoin.svg",
-    url: "/exchange",
+    title: 'Bitcoin',
+    currency: 'BTC',
+    price: '$36,201.34',
+    positive: '+1.71%',
+    image: '/images/content/currency/bitcoin.svg',
+    url: '/exchange',
   },
   {
-    title: "Ethereum",
-    currency: "ETH",
-    price: "$2,605.95",
-    positive: "+2.04%",
-    image: "/images/content/currency/ethereum.svg",
-    url: "/exchange",
+    title: 'Ethereum',
+    currency: 'ETH',
+    price: '$2,605.95',
+    positive: '+2.04%',
+    image: '/images/content/currency/ethereum.svg',
+    url: '/exchange',
   },
   {
-    title: "Bitcoin Cash",
-    currency: "BCH",
-    price: "$939.20",
-    negative: "-0.74%",
-    image: "/images/content/currency/bitcoin-cash.svg",
-    url: "/exchange",
+    title: 'Bitcoin Cash',
+    currency: 'BCH',
+    price: '$939.20',
+    negative: '-0.74%',
+    image: '/images/content/currency/bitcoin-cash.svg',
+    url: '/exchange',
   },
   {
-    title: "Ripple",
-    currency: "XRP",
-    price: "$1.02",
-    positive: "+1.20%",
-    image: "/images/content/currency/ripple.svg",
-    url: "/exchange",
+    title: 'Ripple',
+    currency: 'XRP',
+    price: '$1.02',
+    positive: '+1.20%',
+    image: '/images/content/currency/ripple.svg',
+    url: '/exchange',
   },
   {
-    title: "Chainlink",
-    currency: "LINK",
-    price: "$30.56",
-    negative: "-3.84%",
-    image: "/images/content/currency/chainlink.svg",
-    url: "/exchange",
+    title: 'Chainlink',
+    currency: 'LINK',
+    price: '$30.56',
+    negative: '-3.84%',
+    image: '/images/content/currency/chainlink.svg',
+    url: '/exchange',
   },
 ];
 
 const data = [
   {
-    name: "1",
+    name: '1',
     price: 1000,
   },
   {
-    name: "2",
+    name: '2',
     price: 2300,
   },
   {
-    name: "3",
+    name: '3',
     price: 2000,
   },
   {
-    name: "4",
+    name: '4',
     price: 2780,
   },
   {
-    name: "5",
+    name: '5',
     price: 1890,
   },
   {
-    name: "6",
+    name: '6',
     price: 2390,
   },
   {
-    name: "7",
+    name: '7',
     price: 2490,
   },
   {
-    name: "8",
+    name: '8',
     price: 3000,
   },
   {
-    name: "9",
+    name: '9',
     price: 2500,
   },
   {
-    name: "10",
+    name: '10',
     price: 2000,
   },
   {
-    name: "11",
+    name: '11',
     price: 2780,
   },
   {
-    name: "12",
+    name: '12',
     price: 1890,
   },
   {
-    name: "13",
+    name: '13',
     price: 2390,
   },
   {
-    name: "14",
+    name: '14',
     price: 1490,
   },
 ];
@@ -123,11 +115,11 @@ const Trend = () => {
   const [sorting, setSorting] = useState(navigation[0]);
 
   return (
-    <div className={cn("section", styles.section)}>
-      <div className={cn("container", styles.container)}>
+    <div className={cn('section', styles.section)}>
+      <div className={cn('container', styles.container)}>
         <div className={styles.line}>
-          <h2 className={cn("h2", styles.title)}>Market trend</h2>
-          <Link className={cn("button-stroke", styles.button)}href="/theme/market">
+          <h2 className={cn('h2', styles.title)}>Market trend</h2>
+          <Link className={cn('button-stroke', styles.button)} href="/theme/market">
             View more
           </Link>
         </div>
@@ -177,12 +169,8 @@ const Trend = () => {
               </div>
               <div className={styles.col}>{x.price}</div>
               <div className={styles.col}>
-                {x.positive && (
-                  <div className={styles.positive}>{x.positive}</div>
-                )}
-                {x.negative && (
-                  <div className={styles.negative}>{x.negative}</div>
-                )}
+                {x.positive && <div className={styles.positive}>{x.positive}</div>}
+                {x.negative && <div className={styles.negative}>{x.negative}</div>}
               </div>
               <div className={styles.col}>
                 <div className={styles.chart}>
@@ -199,23 +187,9 @@ const Trend = () => {
                       }}
                     >
                       <defs>
-                        <linearGradient
-                          id="colorPrice"
-                          x1="0"
-                          y1="0"
-                          x2="0"
-                          y2="1"
-                        >
-                          <stop
-                            offset="5%"
-                            stopColor="#45B36B"
-                            stopOpacity={0.6}
-                          />
-                          <stop
-                            offset="95%"
-                            stopColor="#45B36B"
-                            stopOpacity={0}
-                          />
+                        <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#45B36B" stopOpacity={0.6} />
+                          <stop offset="95%" stopColor="#45B36B" stopOpacity={0} />
                         </linearGradient>
                       </defs>
                       <Area
@@ -230,11 +204,7 @@ const Trend = () => {
                 </div>
               </div>
               <div className={styles.col}>
-                <button
-                  className={cn("button-stroke button-small", styles.button)}
-                >
-                  Trade
-                </button>
+                <button className={cn('button-stroke button-small', styles.button)}>Trade</button>
               </div>
             </Link>
           ))}

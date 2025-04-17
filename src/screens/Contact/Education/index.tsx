@@ -1,78 +1,86 @@
-import cn from "classnames";
-import styles from "./Education.module.sass";
-import Link from "next/link";
-import Slider from "react-slick";
-import Icon from "@/components/Icon";
+import cn from 'classnames';
+import styles from './Education.module.sass';
+import Link from 'next/link';
+import Slider from 'react-slick';
+import Icon from '@/components/Icon';
 
 const items = [
   {
-    title: "Celebrating the new Design System",
-    content: "Stack solves business problems from simple to complex",
-    category: "purple",
-    categoryText: "design news",
-    image: "/images/content/education-pic-1.png",
-    image2x: "/images/content/education-pic-1@2x.png",
-    url: "/learn-crypto-details",
+    title: 'Celebrating the new Design System',
+    content: 'Stack solves business problems from simple to complex',
+    category: 'purple',
+    categoryText: 'design news',
+    image: '/images/content/education-pic-1.png',
+    image2x: '/images/content/education-pic-1@2x.png',
+    url: '/learn-crypto-details',
   },
   {
-    title: "Celebrating the new Design System",
-    content: "Stack solves business problems from simple to complex",
-    category: "red",
-    categoryText: "resources",
-    image: "/images/content/education-pic-2.png",
-    image2x: "/images/content/education-pic-2@2x.png",
-    url: "/learn-crypto-details",
+    title: 'Celebrating the new Design System',
+    content: 'Stack solves business problems from simple to complex',
+    category: 'red',
+    categoryText: 'resources',
+    image: '/images/content/education-pic-2.png',
+    image2x: '/images/content/education-pic-2@2x.png',
+    url: '/learn-crypto-details',
   },
   {
-    title: "Celebrating the new Design System",
-    content: "Stack solves business problems from simple to complex",
-    category: "green",
-    categoryText: "freebies",
-    image: "/images/content/education-pic-3.png",
-    image2x: "/images/content/education-pic-3@2x.png",
-    url: "/learn-crypto-details",
+    title: 'Celebrating the new Design System',
+    content: 'Stack solves business problems from simple to complex',
+    category: 'green',
+    categoryText: 'freebies',
+    image: '/images/content/education-pic-3.png',
+    image2x: '/images/content/education-pic-3@2x.png',
+    url: '/learn-crypto-details',
   },
   {
-    title: "Celebrating the new Design System",
-    content: "Stack solves business problems from simple to complex",
-    category: "purple",
-    categoryText: "design news",
-    image: "/images/content/education-pic-4.png",
-    image2x: "/images/content/education-pic-4@2x.png",
-    url: "/learn-crypto-details",
+    title: 'Celebrating the new Design System',
+    content: 'Stack solves business problems from simple to complex',
+    category: 'purple',
+    categoryText: 'design news',
+    image: '/images/content/education-pic-4.png',
+    image2x: '/images/content/education-pic-4@2x.png',
+    url: '/learn-crypto-details',
   },
   {
-    title: "Celebrating the new Design System",
-    content: "Stack solves business problems from simple to complex",
-    category: "purple",
-    categoryText: "design news",
-    image: "/images/content/education-pic-1.png",
-    image2x: "/images/content/education-pic-1@2x.png",
-    url: "/learn-crypto-details",
+    title: 'Celebrating the new Design System',
+    content: 'Stack solves business problems from simple to complex',
+    category: 'purple',
+    categoryText: 'design news',
+    image: '/images/content/education-pic-1.png',
+    image2x: '/images/content/education-pic-1@2x.png',
+    url: '/learn-crypto-details',
   },
   {
-    title: "Celebrating the new Design System",
-    content: "Stack solves business problems from simple to complex",
-    category: "red",
-    categoryText: "resources",
-    image: "/images/content/education-pic-2.png",
-    image2x: "/images/content/education-pic-2@2x.png",
-    url: "/learn-crypto-details",
+    title: 'Celebrating the new Design System',
+    content: 'Stack solves business problems from simple to complex',
+    category: 'red',
+    categoryText: 'resources',
+    image: '/images/content/education-pic-2.png',
+    image2x: '/images/content/education-pic-2@2x.png',
+    url: '/learn-crypto-details',
   },
   {
-    title: "Celebrating the new Design System",
-    content: "Stack solves business problems from simple to complex",
-    category: "green",
-    categoryText: "freebies",
-    image: "/images/content/education-pic-3.png",
-    image2x: "/images/content/education-pic-3@2x.png",
-    url: "/learn-crypto-details",
+    title: 'Celebrating the new Design System',
+    content: 'Stack solves business problems from simple to complex',
+    category: 'green',
+    categoryText: 'freebies',
+    image: '/images/content/education-pic-3.png',
+    image2x: '/images/content/education-pic-3@2x.png',
+    url: '/learn-crypto-details',
   },
 ];
 
-const SlickArrow = ({ currentSlide, slideCount, children, ...props }: { currentSlide?: number; slideCount?: number; children: React.ReactNode; [key: string]: any }) => (
-  <button {...props}>{children}</button>
-);
+const SlickArrow = ({
+  currentSlide,
+  slideCount,
+  children,
+  ...props
+}: {
+  currentSlide?: number;
+  slideCount?: number;
+  children: React.ReactNode;
+  [key: string]: any;
+}) => <button {...props}>{children}</button>;
 
 const Education = () => {
   const settings = {
@@ -113,42 +121,34 @@ const Education = () => {
   };
 
   return (
-    <div className={cn("section", styles.education)}>
-      <div className={cn("container", styles.container)}>
+    <div className={cn('section', styles.education)}>
+      <div className={cn('container', styles.container)}>
         <div className={styles.info}>
-          Before asking for an answer, you may find it in our learn crypto
-          center
+          Before asking for an answer, you may find it in our learn crypto center
         </div>
         <div className={styles.wrapper}>
-          <Slider
-            className={cn("education-slider", styles.slider)}
-            {...settings}
-          >
+          <Slider className={cn('education-slider', styles.slider)} {...settings}>
             {items.map((x, index) => (
               <Link className={styles.item} href={x.url} key={index}>
-                <div className={cn("education-preview", styles.preview)}>
+                <div className={cn('education-preview', styles.preview)}>
                   <div
                     className={cn(
-                      "category",
+                      'category',
                       {
-                        "category-purple": x.category === "purple",
+                        'category-purple': x.category === 'purple',
                       },
                       {
-                        "category-green": x.category === "green",
+                        'category-green': x.category === 'green',
                       },
                       {
-                        "category-red": x.category === "red",
+                        'category-red': x.category === 'red',
                       },
                       styles.category
                     )}
                   >
                     {x.categoryText}
                   </div>
-                  <img
-                    srcSet={`${x.image2x} 2x`}
-                    src={x.image}
-                    alt="Education"
-                  />
+                  <img srcSet={`${x.image2x} 2x`} src={x.image} alt="Education" />
                 </div>
                 <div className={styles.body}>
                   <div className={styles.title}>{x.title}</div>

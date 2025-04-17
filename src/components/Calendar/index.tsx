@@ -1,12 +1,12 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Calendar.module.sass";
-import Icon from "@/components/Icon";
-import OutsideClickHandler from "react-outside-click-handler";
-import DatePicker from "react-datepicker";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Calendar.module.sass';
+import Icon from '@/components/Icon';
+import OutsideClickHandler from 'react-outside-click-handler';
+import DatePicker from 'react-datepicker';
 
-const dates = ["One day", "One week", "One month", "One year", "All time"];
+const dates = ['One day', 'One week', 'One month', 'One year', 'All time'];
 
 const Calendar = ({ className }: { className: string }) => {
   const [visible, setVisible] = useState(false);
@@ -22,11 +22,7 @@ const Calendar = ({ className }: { className: string }) => {
     <OutsideClickHandler onOutsideClick={() => setVisible(false)}>
       <div className={cn(className, styles.calendar)}>
         <button
-          className={cn(
-            "button-stroke button-small",
-            { [styles.active]: visible },
-            styles.button
-          )}
+          className={cn('button-stroke button-small', { [styles.active]: visible }, styles.button)}
           onClick={() => setVisible(!visible)}
         >
           <span>All time</span>
@@ -40,17 +36,14 @@ const Calendar = ({ className }: { className: string }) => {
               startDate={startDate}
               endDate={endDate}
               monthsShown={2}
-              dateFormatCalendar={"MMM yyyy"}
+              dateFormatCalendar={'MMM yyyy'}
               selectsRange
               inline
             />
           </div>
           <div className={styles.variants}>
             {dates.map((x, index) => (
-              <button
-                className={cn("button-stroke button-small", styles.button)}
-                key={index}
-              >
+              <button className={cn('button-stroke button-small', styles.button)} key={index}>
                 {x}
               </button>
             ))}

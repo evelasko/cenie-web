@@ -1,6 +1,6 @@
-import Main from "./Main";
-import Details from "./Details";
-import Lessons from "@/components/Lessons";
+import Main from './Main';
+import Details from './Details';
+import Lessons from '@/components/Lessons';
 
 const Market = () => {
   return (

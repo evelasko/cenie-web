@@ -1,83 +1,83 @@
-import cn from "classnames";
-import styles from "./AccountBalances.module.sass";
-import { AreaChart, Area, ResponsiveContainer } from "recharts";
+import cn from 'classnames';
+import styles from './AccountBalances.module.sass';
+import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 
 const items = [
   {
-    title: "Exchange",
-    color: "#9757D7",
-    currency: "10075.56213968 USDT",
-    price: "$10,095.35",
+    title: 'Exchange',
+    color: '#9757D7',
+    currency: '10075.56213968 USDT',
+    price: '$10,095.35',
   },
   {
-    title: "Fiat and Spot",
-    color: "#FFD166",
-    currency: "0.0000000000 USDT",
-    price: "$0.00",
+    title: 'Fiat and Spot',
+    color: '#FFD166',
+    currency: '0.0000000000 USDT',
+    price: '$0.00',
   },
   {
-    title: "Available",
-    color: "#4BC9F0",
-    currency: "0.0000000000 USDT",
-    price: "$0.00",
+    title: 'Available',
+    color: '#4BC9F0',
+    currency: '0.0000000000 USDT',
+    price: '$0.00',
   },
 ];
 
 const data = [
   {
-    name: "1",
+    name: '1',
     price: 1000,
   },
   {
-    name: "2",
+    name: '2',
     price: 2300,
   },
   {
-    name: "3",
+    name: '3',
     price: 2000,
   },
   {
-    name: "4",
+    name: '4',
     price: 2780,
   },
   {
-    name: "5",
+    name: '5',
     price: 1890,
   },
   {
-    name: "6",
+    name: '6',
     price: 2390,
   },
   {
-    name: "7",
+    name: '7',
     price: 2490,
   },
   {
-    name: "8",
+    name: '8',
     price: 3000,
   },
   {
-    name: "9",
+    name: '9',
     price: 2500,
   },
   {
-    name: "10",
+    name: '10',
     price: 2000,
   },
   {
-    name: "11",
+    name: '11',
     price: 2780,
   },
   {
-    name: "12",
+    name: '12',
     price: 1890,
   },
   {
-    name: "13",
+    name: '13',
     price: 2390,
   },
   {
-    name: "14",
+    name: '14',
     price: 1490,
   },
 ];
@@ -90,10 +90,7 @@ const AccountBalances = () => {
           {items.map((x, index) => (
             <div className={styles.item} key={index}>
               <div className={styles.title}>
-                <div
-                  className={styles.bg}
-                  style={{ backgroundColor: x.color }}
-                ></div>
+                <div className={styles.bg} style={{ backgroundColor: x.color }}></div>
                 {x.title}
               </div>
               <div className={styles.details}>
@@ -107,7 +104,7 @@ const AccountBalances = () => {
       <div className={styles.col}>
         <div className={styles.info}>
           <div className={styles.money}>USDT/USDC</div>
-          <div className={cn("category-green", styles.category)}>+12.96%</div>
+          <div className={cn('category-green', styles.category)}>+12.96%</div>
         </div>
         <div className={styles.price}>1.00069787 USDC</div>
         <div className={styles.chart}>

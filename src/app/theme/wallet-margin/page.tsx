@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import WalletMargin from "@/screens/WalletMargin";
+import Page from '@/components/Page';
+import WalletMargin from '@/screens/WalletMargin';
 
 export default function WalletMarginPage() {
   return (
@@ -7,4 +7,4 @@ export default function WalletMarginPage() {
       <WalletMargin />
     </Page>
   );
-} 
+}

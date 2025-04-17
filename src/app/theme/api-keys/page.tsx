@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import ApiKeys from "@/screens/ApiKeys";
+import Page from '@/components/Page';
+import ApiKeys from '@/screens/ApiKeys';
 
 export default function ApiKeysPage() {
   return (
@@ -7,4 +7,4 @@ export default function ApiKeysPage() {
       <ApiKeys />
     </Page>
   );
-} 
+}

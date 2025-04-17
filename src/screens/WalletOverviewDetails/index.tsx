@@ -1,16 +1,16 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./WalletOverviewDetails.module.sass";
-import Link from "next/link";
-import Wallet from "@/components/Wallet";
-import Icon from "@/components/Icon";
-import AccountBalances from "./AccountBalances";
-import Faq from "./Faq";
-import Modal from "@/components/Modal";
-import Deposit from "@/components/Deposit";
-import Withdraw from "@/components/Withdraw";
-import Transfer from "@/components/Transfer";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './WalletOverviewDetails.module.sass';
+import Link from 'next/link';
+import Wallet from '@/components/Wallet';
+import Icon from '@/components/Icon';
+import AccountBalances from './AccountBalances';
+import Faq from './Faq';
+import Modal from '@/components/Modal';
+import Deposit from '@/components/Deposit';
+import Withdraw from '@/components/Withdraw';
+import Transfer from '@/components/Transfer';
 
 const WalletOverview = () => {
   const [visibleDeposit, setVisibleDeposit] = useState(false);
@@ -22,8 +22,8 @@ const WalletOverview = () => {
       <Wallet>
         <div className={styles.top}>
           <div className={styles.line}>
-            <h4 className={cn("h4", styles.title)}>
-              <Link className={styles.back}href="/theme/wallet-overview">
+            <h4 className={cn('h4', styles.title)}>
+              <Link className={styles.back} href="/theme/wallet-overview">
                 <Icon name="arrow-left" size={32} />
               </Link>
               USDT
@@ -31,19 +31,19 @@ const WalletOverview = () => {
             </h4>
             <div className={styles.btns}>
               <button
-                className={cn("button-small", styles.button)}
+                className={cn('button-small', styles.button)}
                 onClick={() => setVisibleDeposit(true)}
               >
                 Deposit
               </button>
               <button
-                className={cn("button-stroke button-small", styles.button)}
+                className={cn('button-stroke button-small', styles.button)}
                 onClick={() => setVisibleWithdraw(true)}
               >
                 Withdraw
               </button>
               <button
-                className={cn("button-stroke button-small", styles.button)}
+                className={cn('button-stroke button-small', styles.button)}
                 onClick={() => setVisibleTransfer(true)}
               >
                 Transfer
@@ -54,7 +54,7 @@ const WalletOverview = () => {
             <div className={styles.info}>Total balance</div>
             <div className={styles.currency}>
               <div className={styles.number}>10075.56213968</div>
-              <div className={cn("category-green", styles.category)}>USDT</div>
+              <div className={cn('category-green', styles.category)}>USDT</div>
             </div>
             <div className={styles.price}>$10,095.35</div>
           </div>
@@ -77,16 +77,10 @@ const WalletOverview = () => {
       <Modal visible={visibleDeposit} onClose={() => setVisibleDeposit(false)}>
         <Deposit />
       </Modal>
-      <Modal
-        visible={visibleWithdraw}
-        onClose={() => setVisibleWithdraw(false)}
-      >
+      <Modal visible={visibleWithdraw} onClose={() => setVisibleWithdraw(false)}>
         <Withdraw />
       </Modal>
-      <Modal
-        visible={visibleTransfer}
-        onClose={() => setVisibleTransfer(false)}
-      >
+      <Modal visible={visibleTransfer} onClose={() => setVisibleTransfer(false)}>
         <Transfer />
       </Modal>
     </>

@@ -1,19 +1,18 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Confirm.module.sass";
-import Radio from "@/components/Radio";
-import Icon from "@/components/Icon";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Confirm.module.sass';
+import Radio from '@/components/Radio';
+import Icon from '@/components/Icon';
 
 const Confirm = ({ goNext }: { goNext: () => void }) => {
   const [confirm, setConfirm] = useState(true);
 
   return (
     <form className={styles.form}>
-      <h3 className={cn("h3", styles.title)}>Let’s confirm it’s really you</h3>
+      <h3 className={cn('h3', styles.title)}>Let’s confirm it’s really you</h3>
       <div className={styles.info}>
-        Help us secure your account. <br></br>Please complete the verifications
-        below
+        Help us secure your account. <br></br>Please complete the verifications below
       </div>
       <div className={styles.variants}>
         <Radio
@@ -31,7 +30,7 @@ const Confirm = ({ goNext }: { goNext: () => void }) => {
           content="<span>Get the code by email at <strong>tranm••••••••••••@gm•••.com</strong></span>"
         />
       </div>
-      <button className={cn("button", styles.button)} onClick={goNext}>
+      <button className={cn('button', styles.button)} onClick={goNext}>
         <span>Continue</span>
         <Icon name="arrow-right" size={16} />
       </button>

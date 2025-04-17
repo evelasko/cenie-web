@@ -1,13 +1,13 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./EnterAmount.module.sass";
-import Icon from "@/components/Icon";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './EnterAmount.module.sass';
+import Icon from '@/components/Icon';
 
-const priceVariants = ["50.00$", "100.00$", "200.00$", "500.00$"];
+const priceVariants = ['50.00$', '100.00$', '200.00$', '500.00$'];
 
 const EnterAmount = ({ goNext, goBack }: { goNext: () => void; goBack: () => void }) => {
-  const [price, setPrice] = useState("20.00");
+  const [price, setPrice] = useState('20.00');
 
   const handleSubmit = (e: any) => {
     alert();
@@ -26,7 +26,7 @@ const EnterAmount = ({ goNext, goBack }: { goNext: () => void; goBack: () => voi
         </div>
       </div>
       <div className={styles.payment}>
-        <div className={cn("h4", styles.sign)}>$</div>
+        <div className={cn('h4', styles.sign)}>$</div>
         <div className={styles.field}>
           <div className={styles.value}>{price}</div>
           <input
@@ -42,17 +42,17 @@ const EnterAmount = ({ goNext, goBack }: { goNext: () => void; goBack: () => voi
       <div className={styles.variants}>
         {priceVariants.map((x, index) => (
           <button
-            className={cn("button-stroke button-small", styles.button)}
+            className={cn('button-stroke button-small', styles.button)}
             type="button"
             key={index}
-            onClick={() => setPrice(x.replace("$", ""))}
+            onClick={() => setPrice(x.replace('$', ''))}
           >
             {x}
           </button>
         ))}
       </div>
       <div className={styles.btns}>
-        <button className={cn("button", styles.button)} onClick={goNext}>
+        <button className={cn('button', styles.button)} onClick={goNext}>
           Continue
         </button>
       </div>

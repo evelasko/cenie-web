@@ -1,32 +1,32 @@
-import cn from "classnames";
-import Link from "next/link";
-import styles from "./Download.module.sass";
+import cn from 'classnames';
+import Link from 'next/link';
+import styles from './Download.module.sass';
 
 const items = [
   {
-    title: "Appstore",
-    content: "Download from",
-    image: "/images/content/apple.svg",
-    url: "/",
+    title: 'Appstore',
+    content: 'Download from',
+    image: '/images/content/apple.svg',
+    url: '/',
   },
   {
-    title: "Google Play",
-    content: "Download from",
-    image: "/images/content/google-play.svg",
-    url: "/",
+    title: 'Google Play',
+    content: 'Download from',
+    image: '/images/content/google-play.svg',
+    url: '/',
   },
   {
-    title: "Mac OS",
-    content: "Download for",
-    image: "/images/content/apple.svg",
-    url: "/",
+    title: 'Mac OS',
+    content: 'Download for',
+    image: '/images/content/apple.svg',
+    url: '/',
   },
 ];
 
 const Download = () => {
   return (
-    <div className={cn("section-mb0", styles.download)}>
-      <div className={cn("container", styles.container)}>
+    <div className={cn('section-mb0', styles.download)}>
+      <div className={cn('container', styles.container)}>
         <div className={styles.bg}>
           <img
             srcSet="/images/content/download-pic@2x.png 2x"
@@ -35,10 +35,8 @@ const Download = () => {
           />
         </div>
         <div className={styles.wrap}>
-          <h2 className={cn("h2", styles.title)}>Trade anywhere</h2>
-          <div className={styles.info}>
-            Anytime, anywhere. Trade crypto on your terms.
-          </div>
+          <h2 className={cn('h2', styles.title)}>Trade anywhere</h2>
+          <div className={styles.info}>Anytime, anywhere. Trade crypto on your terms.</div>
           <div className={styles.list}>
             {items.map((x, index) => (
               <Link className={styles.item} key={index} href={x.url}>

@@ -1,9 +1,17 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Item.module.sass";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Item.module.sass';
 
-const Item = ({ className, item, children }: { className: string; item: any; children: React.ReactNode }) => {
+const Item = ({
+  className,
+  item,
+  children,
+}: {
+  className: string;
+  item: any;
+  children: React.ReactNode;
+}) => {
   const [visible, setVisible] = useState(false);
 
   return (

@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import LearnCrypto from "@/screens/LearnCrypto";
+import Page from '@/components/Page';
+import LearnCrypto from '@/screens/LearnCrypto';
 
 export default function HomePage() {
   return (

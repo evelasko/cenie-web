@@ -1,6 +1,6 @@
-import cn from "classnames";
-import styles from "./ScrollButton.module.sass";
-import Icon from "@/components/Icon";
+import cn from 'classnames';
+import styles from './ScrollButton.module.sass';
+import Icon from '@/components/Icon';
 
 const ScrollButton = ({ className, onScroll }: { className?: string; onScroll: () => void }) => {
   return (

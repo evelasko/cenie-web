@@ -1,20 +1,20 @@
-import cn from "classnames";
-import styles from "./Successfully.module.sass";
-import Link from "next/link";
+import cn from 'classnames';
+import styles from './Successfully.module.sass';
+import Link from 'next/link';
 
 const items = [
   {
-    title: "Status",
-    content: "Completed",
-    color: "#58BD7D",
+    title: 'Status',
+    content: 'Completed',
+    color: '#58BD7D',
   },
   {
-    title: "Transaction ID",
-    content: "0msx836930...87r398",
+    title: 'Transaction ID',
+    content: '0msx836930...87r398',
   },
   {
-    title: "Address",
-    content: "0xf8aaa2b1842e796191e736434sda....479",
+    title: 'Address',
+    content: '0xf8aaa2b1842e796191e736434sda....479',
   },
 ];
 
@@ -22,8 +22,8 @@ const Successfully = () => {
   return (
     <>
       <div className={styles.successfully}>
-        <div className={cn("h2", styles.title)}>
-          Yay!{" "}
+        <div className={cn('h2', styles.title)}>
+          Yay!{' '}
           <span role="img" aria-label="firework">
             🎉
           </span>
@@ -41,7 +41,7 @@ const Successfully = () => {
             </div>
           ))}
         </div>
-        <Link className={cn("button", styles.button)} href="/wallet-overview">
+        <Link className={cn('button', styles.button)} href="/wallet-overview">
           Wallet
         </Link>
       </div>

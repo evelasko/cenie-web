@@ -1,9 +1,9 @@
-import cn from "classnames";
-import styles from "./Item.module.sass";
-import Link from "next/link";
-import Icon from "@/components/Icon";
+import cn from 'classnames';
+import styles from './Item.module.sass';
+import Link from 'next/link';
+import Icon from '@/components/Icon';
 
-const Item = ({ className, item }: { className: string, item: any }) => {
+const Item = ({ className, item }: { className: string; item: any }) => {
   return (
     <Link className={cn(className, styles.item)} href={item.url}>
       <div className={styles.preview}>
@@ -14,10 +14,10 @@ const Item = ({ className, item }: { className: string, item: any }) => {
           <div
             className={cn(
               {
-                "category-red": item.category === "red",
+                'category-red': item.category === 'red',
               },
               {
-                "category-green": item.category === "green",
+                'category-green': item.category === 'green',
               },
               styles.category
             )}
@@ -25,7 +25,7 @@ const Item = ({ className, item }: { className: string, item: any }) => {
             {item.categoryText}
           </div>
         )}
-        <h4 className={cn("h4", styles.title)}>{item.title}</h4>
+        <h4 className={cn('h4', styles.title)}>{item.title}</h4>
         <div className={styles.currency}>{item.currency}</div>
         <div className={styles.content}>{item.content}</div>
       </div>

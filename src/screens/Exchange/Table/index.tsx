@@ -1,71 +1,71 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Table.module.sass";
-import Dropdown from "@/components/Dropdown";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Table.module.sass';
+import Dropdown from '@/components/Dropdown';
 
-const navigation = ["Market trades", "My trades", "Open orders", "Favorites"];
+const navigation = ['Market trades', 'My trades', 'Open orders', 'Favorites'];
 
 const items = [
   {
-    time: "18:05:40",
-    positive: "36,641.209735578",
-    amount: "0.245455484546",
-    total: "36,641.2a09735578",
+    time: '18:05:40',
+    positive: '36,641.209735578',
+    amount: '0.245455484546',
+    total: '36,641.2a09735578',
   },
   {
-    time: "18:05:40",
-    positive: "36,641.209735578",
-    amount: "0.188888888888",
-    total: "36,641.2a09735578",
+    time: '18:05:40',
+    positive: '36,641.209735578',
+    amount: '0.188888888888',
+    total: '36,641.2a09735578',
   },
   {
-    time: "18:05:40",
-    positive: "36,641.209735578",
-    amount: "0.245455484546",
-    total: "36,641.2a09735578",
+    time: '18:05:40',
+    positive: '36,641.209735578',
+    amount: '0.245455484546',
+    total: '36,641.2a09735578',
   },
   {
-    time: "18:05:40",
-    positive: "36,641.209735578",
-    amount: "0.188888888888",
-    total: "36,641.2a09735578",
+    time: '18:05:40',
+    positive: '36,641.209735578',
+    amount: '0.188888888888',
+    total: '36,641.2a09735578',
   },
   {
-    time: "18:05:40",
-    positive: "36,641.209735578",
-    amount: "0.245455484546",
-    total: "36,641.2a09735578",
+    time: '18:05:40',
+    positive: '36,641.209735578',
+    amount: '0.245455484546',
+    total: '36,641.2a09735578',
   },
   {
-    time: "18:05:40",
-    positive: "36,641.209735578",
-    amount: "0.188888888888",
-    total: "36,641.2a09735578",
+    time: '18:05:40',
+    positive: '36,641.209735578',
+    amount: '0.188888888888',
+    total: '36,641.2a09735578',
   },
   {
-    time: "18:05:40",
-    positive: "36,641.209735578",
-    amount: "0.245455484546",
-    total: "36,641.2a09735578",
+    time: '18:05:40',
+    positive: '36,641.209735578',
+    amount: '0.245455484546',
+    total: '36,641.2a09735578',
   },
   {
-    time: "18:05:40",
-    positive: "36,641.209735578",
-    amount: "0.188888888888",
-    total: "36,641.2a09735578",
+    time: '18:05:40',
+    positive: '36,641.209735578',
+    amount: '0.188888888888',
+    total: '36,641.2a09735578',
   },
   {
-    time: "18:05:40",
-    positive: "36,641.209735578",
-    amount: "0.245455484546",
-    total: "36,641.2a09735578",
+    time: '18:05:40',
+    positive: '36,641.209735578',
+    amount: '0.245455484546',
+    total: '36,641.2a09735578',
   },
   {
-    time: "18:05:40",
-    positive: "36,641.209735578",
-    amount: "0.188888888888",
-    total: "36,641.2a09735578",
+    time: '18:05:40',
+    positive: '36,641.209735578',
+    amount: '0.188888888888',
+    total: '36,641.2a09735578',
   },
 ];
 
@@ -113,12 +113,8 @@ const Table = () => {
           <div className={styles.row} key={index}>
             <div className={styles.col}>{x.time}</div>
             <div className={styles.col}>
-              {x.positive && (
-                <div className={styles.positive}>{x.positive}</div>
-              )}
-              {x.negative && (
-                <div className={styles.negative}>{x.negative}</div>
-              )}
+              {x.positive && <div className={styles.positive}>{x.positive}</div>}
+              {x.negative && <div className={styles.negative}>{x.negative}</div>}
             </div>
             <div className={styles.col}>{x.amount}</div>
             <div className={styles.col}>{x.total}</div>

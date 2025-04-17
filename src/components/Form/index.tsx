@@ -1,6 +1,6 @@
-import cn from "classnames";
-import styles from "./Form.module.sass";
-import Icon from "@/components/Icon";
+import cn from 'classnames';
+import styles from './Form.module.sass';
+import Icon from '@/components/Icon';
 
 type FormProps = {
   className: string;
@@ -37,7 +37,7 @@ const Form = ({
         className={styles.input}
         type={type}
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={e => setValue(e.target.value)}
         name={name}
         placeholder={placeholder}
         required

@@ -1,5 +1,5 @@
-import cn from "classnames";
-import styles from "./ImportantNotes.module.sass";
+import cn from 'classnames';
+import styles from './ImportantNotes.module.sass';
 
 const ImportantNotes = ({ goNext }: { goNext: () => void }) => {
   return (
@@ -10,12 +10,12 @@ const ImportantNotes = ({ goNext }: { goNext: () => void }) => {
       </div>
       <div className={styles.info}>Veum Cecilia</div>
       <div className={styles.text}>
-        You MUST include the Reference Code in your deposit in order to credit
-        your account! <br></br>Reference Code:
+        You MUST include the Reference Code in your deposit in order to credit your account!{' '}
+        <br></br>Reference Code:
       </div>
       <div className={styles.code}>BLUTUKHY34PB</div>
       <div className={styles.btns}>
-        <button className={cn("button", styles.button)} onClick={goNext}>
+        <button className={cn('button', styles.button)} onClick={goNext}>
           Continue
         </button>
       </div>

@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import PageList from "@/screens/PageList";
+import Page from '@/components/Page';
+import PageList from '@/screens/PageList';
 
 export default function HomePage() {
   return (

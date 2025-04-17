@@ -1,14 +1,12 @@
-import cn from "classnames";
-import styles from "./Main.module.sass";
+import cn from 'classnames';
+import styles from './Main.module.sass';
 
 const Main = () => {
   return (
-    <div className={cn("section-mb0", styles.main)}>
-      <div className={cn("container", styles.container)}>
+    <div className={cn('section-mb0', styles.main)}>
+      <div className={cn('container', styles.container)}>
         <div className={styles.wrap}>
-          <h1 className={cn("h1", styles.title)}>
-            Today's Cryptocurrency prices
-          </h1>
+          <h1 className={cn('h1', styles.title)}>Today's Cryptocurrency prices</h1>
           <div className={styles.text}>
             The global crypto market cap is <strong>$1.86T</strong>
           </div>

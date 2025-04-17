@@ -1,55 +1,55 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./ProfileInfo.module.sass";
-import Profile from "@/components/Profile";
-import Dropdown from "@/components/Dropdown";
-import Switch from "@/components/Switch";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './ProfileInfo.module.sass';
+import Profile from '@/components/Profile';
+import Dropdown from '@/components/Dropdown';
+import Switch from '@/components/Switch';
 
 const breadcrumbs = [
   {
-    title: "Home",
-    url: "/",
+    title: 'Home',
+    url: '/',
   },
   {
-    title: "Profile info",
+    title: 'Profile info',
   },
 ];
 
-const languageOptions = ["🇺🇸 USA", "🇻🇳 VIE", "🇷🇺 RUS"];
+const languageOptions = ['🇺🇸 USA', '🇻🇳 VIE', '🇷🇺 RUS'];
 
 const settings = [
   {
-    title: "level 1",
+    title: 'level 1',
     items: [
       {
-        title: "Deposit assets",
-        id: "1",
+        title: 'Deposit assets',
+        id: '1',
       },
       {
-        title: "Withdraw assets",
-        content: "Enabled $1,000,000/day",
+        title: 'Withdraw assets',
+        content: 'Enabled $1,000,000/day',
       },
       {
-        title: "Card purchases",
-        id: "2",
+        title: 'Card purchases',
+        id: '2',
       },
       {
-        title: "Bank deposit",
-        id: "3",
+        title: 'Bank deposit',
+        id: '3',
       },
     ],
   },
   {
-    title: "level 2",
+    title: 'level 2',
     items: [
       {
-        title: "Fiat and Spot wallet",
-        id: "4",
+        title: 'Fiat and Spot wallet',
+        id: '4',
       },
       {
-        title: "Margin wallet",
-        content: "Enabled 100x Leverage",
+        title: 'Margin wallet',
+        content: 'Enabled 100x Leverage',
       },
     ],
   },
@@ -62,9 +62,9 @@ const ProfileInfo = () => {
 
   const handleChange = (id: string) => {
     if (selectedFilters.includes(id)) {
-      setSelectedFilters(selectedFilters.filter((x) => x !== id));
+      setSelectedFilters(selectedFilters.filter(x => x !== id));
     } else {
-      setSelectedFilters((selectedFilters) => [...selectedFilters, id]);
+      setSelectedFilters(selectedFilters => [...selectedFilters, id]);
     }
   };
 
@@ -99,16 +99,14 @@ const ProfileInfo = () => {
                     onChange={() => handleChange(item.id)}
                   />
                 )}
-                {item.content && (
-                  <div className={styles.content}>{item.content}</div>
-                )}
+                {item.content && <div className={styles.content}>{item.content}</div>}
               </div>
             ))}
           </div>
         ))}
       </div>
       <div className={styles.btns}>
-        <button className={cn("button", styles.button)}>Save settings</button>
+        <button className={cn('button', styles.button)}>Save settings</button>
       </div>
     </Profile>
   );

@@ -1,5 +1,5 @@
-import cn from "classnames";
-import styles from "./Radio.module.sass";
+import cn from 'classnames';
+import styles from './Radio.module.sass';
 
 type RadioProps = {
   className?: string;
@@ -20,10 +20,7 @@ const Radio = ({ className, content, name, value, onChange }: RadioProps) => {
       />
       <span className={styles.inner}>
         <span className={styles.tick}></span>
-        <span
-          className={styles.text}
-          dangerouslySetInnerHTML={{ __html: content }}
-        ></span>
+        <span className={styles.text} dangerouslySetInnerHTML={{ __html: content }}></span>
       </span>
     </label>
   );

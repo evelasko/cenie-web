@@ -1,11 +1,11 @@
-import cn from "classnames";
-import styles from "./NewPassword.module.sass";
-import TextInput from "@/components/TextInput";
+import cn from 'classnames';
+import styles from './NewPassword.module.sass';
+import TextInput from '@/components/TextInput';
 
 const NewPassword = () => {
   return (
     <form className={styles.form}>
-      <h3 className={cn("h3", styles.title)}>New password</h3>
+      <h3 className={cn('h3', styles.title)}>New password</h3>
       <div className={styles.fieldset}>
         <TextInput
           className={styles.field}
@@ -34,7 +34,7 @@ const NewPassword = () => {
           view
         />
       </div>
-      <button className={cn("button", styles.button)}>Continue</button>
+      <button className={cn('button', styles.button)}>Continue</button>
     </form>
   );
 };

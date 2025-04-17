@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import WalletOverview from "@/screens/WalletOverview";
+import Page from '@/components/Page';
+import WalletOverview from '@/screens/WalletOverview';
 
 export default function HomePage() {
   return (

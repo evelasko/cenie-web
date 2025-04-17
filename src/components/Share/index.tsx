@@ -1,15 +1,23 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Share.module.sass";
-import Icon from "@/components/Icon";
-import { FacebookShareButton, TwitterShareButton } from "react-share";
-import OutsideClickHandler from "react-outside-click-handler";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Share.module.sass';
+import Icon from '@/components/Icon';
+import { FacebookShareButton, TwitterShareButton } from 'react-share';
+import OutsideClickHandler from 'react-outside-click-handler';
 
-const shareUrlFacebook = "https://ui8.net";
-const shareUrlTwitter = "https://ui8.net";
+const shareUrlFacebook = 'https://ui8.net';
+const shareUrlTwitter = 'https://ui8.net';
 
-const Share = ({ className, openUp, darkButton }: { className?: string; openUp?: boolean; darkButton?: boolean }) => {
+const Share = ({
+  className,
+  openUp,
+  darkButton,
+}: {
+  className?: string;
+  openUp?: boolean;
+  darkButton?: boolean;
+}) => {
   const [visible, setVisible] = useState(false);
   return (
     <OutsideClickHandler onOutsideClick={() => setVisible(false)}>
@@ -23,7 +31,7 @@ const Share = ({ className, openUp, darkButton }: { className?: string; openUp?:
       >
         <button
           className={cn(
-            "button-circle-stroke button-small",
+            'button-circle-stroke button-small',
             { [styles.active]: visible },
             styles.button
           )}

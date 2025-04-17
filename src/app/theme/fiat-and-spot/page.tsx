@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import FiatAndSpot from "@/screens/FiatAndSpot";
+import Page from '@/components/Page';
+import FiatAndSpot from '@/screens/FiatAndSpot';
 
 export default function FiatAndSpotPage() {
   return (
@@ -7,4 +7,4 @@ export default function FiatAndSpotPage() {
       <FiatAndSpot />
     </Page>
   );
-} 
+}

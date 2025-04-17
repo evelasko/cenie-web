@@ -1,8 +1,8 @@
-import cn from "classnames";
-import styles from "./Filters.module.sass";
-import Checkbox from "@/components/Checkbox";
-import { SetStateAction } from "react";
-import { Dispatch } from "react";
+import cn from 'classnames';
+import styles from './Filters.module.sass';
+import Checkbox from '@/components/Checkbox';
+import { SetStateAction } from 'react';
+import { Dispatch } from 'react';
 
 const Filters = ({
   className,
@@ -17,9 +17,9 @@ const Filters = ({
 }) => {
   const handleChange = (filter: string) => {
     if (selectedFilters.includes(filter)) {
-      setSelectedFilters(selectedFilters.filter((x) => x !== filter));
+      setSelectedFilters(selectedFilters.filter(x => x !== filter));
     } else {
-      setSelectedFilters((selectedFilters) => [...selectedFilters, filter]);
+      setSelectedFilters(selectedFilters => [...selectedFilters, filter]);
     }
   };
 
@@ -38,12 +38,8 @@ const Filters = ({
         ))}
       </div>
       <div className={styles.btns}>
-        <button className={cn("button-stroke button-small", styles.button)}>
-          Select all
-        </button>
-        <button className={cn("button-stroke button-small", styles.button)}>
-          Unslect all
-        </button>
+        <button className={cn('button-stroke button-small', styles.button)}>Select all</button>
+        <button className={cn('button-stroke button-small', styles.button)}>Unslect all</button>
       </div>
     </div>
   );

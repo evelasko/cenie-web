@@ -1,77 +1,71 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Activity.module.sass";
-import Icon from "@/components/Icon";
-import Actions from "@/components/Actions";
-import Calendar from "@/components/Calendar";
-import Export from "@/components/Export";
-import Dropdown from "@/components/Dropdown";
-import Table from "./Table";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Activity.module.sass';
+import Icon from '@/components/Icon';
+import Actions from '@/components/Actions';
+import Calendar from '@/components/Calendar';
+import Export from '@/components/Export';
+import Dropdown from '@/components/Dropdown';
+import Table from './Table';
 
-const navigation = [
-  "All type",
-  "Withdrawals",
-  "Deposit",
-  "Transfer",
-  "Bank credit",
-];
+const navigation = ['All type', 'Withdrawals', 'Deposit', 'Transfer', 'Bank credit'];
 
 const table = [
   {
     withdrew: true,
-    currency: "Bitcoin",
-    image: "/images/content/currency/bitcoin.svg",
-    amount: "1,641.20 BTC",
-    address: "3DkQyAdif6kQLPMBu",
-    transaction: "3DkQyAdif6kQLPMBu",
-    date: "2021-06-05 04:12:30",
-    url: "/buy-crypto",
+    currency: 'Bitcoin',
+    image: '/images/content/currency/bitcoin.svg',
+    amount: '1,641.20 BTC',
+    address: '3DkQyAdif6kQLPMBu',
+    transaction: '3DkQyAdif6kQLPMBu',
+    date: '2021-06-05 04:12:30',
+    url: '/buy-crypto',
   },
   {
     deposited: true,
-    currency: "Bitcoin",
-    image: "/images/content/currency/bitcoin.svg",
-    amount: "1,641.20 BTC",
-    address: "3DkQyAdif6kQLPMBu",
-    transaction: "3DkQyAdif6kQLPMBu",
-    date: "2021-06-05 04:12:30",
-    url: "/buy-crypto",
+    currency: 'Bitcoin',
+    image: '/images/content/currency/bitcoin.svg',
+    amount: '1,641.20 BTC',
+    address: '3DkQyAdif6kQLPMBu',
+    transaction: '3DkQyAdif6kQLPMBu',
+    date: '2021-06-05 04:12:30',
+    url: '/buy-crypto',
   },
   {
     withdrew: true,
-    currency: "Bitcoin",
-    image: "/images/content/currency/bitcoin.svg",
-    amount: "1,641.20 BTC",
-    address: "3DkQyAdif6kQLPMBu",
-    transaction: "3DkQyAdif6kQLPMBu",
-    date: "2021-06-05 04:12:30",
-    url: "/buy-crypto",
+    currency: 'Bitcoin',
+    image: '/images/content/currency/bitcoin.svg',
+    amount: '1,641.20 BTC',
+    address: '3DkQyAdif6kQLPMBu',
+    transaction: '3DkQyAdif6kQLPMBu',
+    date: '2021-06-05 04:12:30',
+    url: '/buy-crypto',
   },
   {
     deposited: true,
-    currency: "Bitcoin",
-    image: "/images/content/currency/bitcoin.svg",
-    amount: "1,641.20 BTC",
-    address: "3DkQyAdif6kQLPMBu",
-    transaction: "3DkQyAdif6kQLPMBu",
-    date: "2021-06-05 04:12:30",
-    url: "/buy-crypto",
+    currency: 'Bitcoin',
+    image: '/images/content/currency/bitcoin.svg',
+    amount: '1,641.20 BTC',
+    address: '3DkQyAdif6kQLPMBu',
+    transaction: '3DkQyAdif6kQLPMBu',
+    date: '2021-06-05 04:12:30',
+    url: '/buy-crypto',
   },
   {
     deposited: true,
-    currency: "Bitcoin",
-    image: "/images/content/currency/bitcoin.svg",
-    amount: "1,641.20 BTC",
-    address: "3DkQyAdif6kQLPMBu",
-    transaction: "3DkQyAdif6kQLPMBu",
-    date: "2021-06-05 04:12:30",
-    url: "/buy-crypto",
+    currency: 'Bitcoin',
+    image: '/images/content/currency/bitcoin.svg',
+    amount: '1,641.20 BTC',
+    address: '3DkQyAdif6kQLPMBu',
+    transaction: '3DkQyAdif6kQLPMBu',
+    date: '2021-06-05 04:12:30',
+    url: '/buy-crypto',
   },
 ];
 
 const Activity = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [activeIndex, setActiveIndex] = useState(0);
 
   const [sorting, setSorting] = useState(navigation[0]);
@@ -82,7 +76,7 @@ const Activity = () => {
 
   return (
     <div className={styles.activity}>
-      <div className={cn("container", styles.container)}>
+      <div className={cn('container', styles.container)}>
         <div className={styles.body}>
           <div className={styles.top}>
             <div className={styles.nav}>
@@ -107,16 +101,12 @@ const Activity = () => {
                 options={navigation}
               />
             </div>
-            <form
-              className={styles.form}
-              action=""
-              onSubmit={(e: any) => handleSubmit(e)}
-            >
+            <form className={styles.form} action="" onSubmit={(e: any) => handleSubmit(e)}>
               <input
                 className={styles.input}
                 type="text"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={e => setEmail(e.target.value)}
                 name="search"
                 placeholder="Search"
                 required
@@ -128,7 +118,7 @@ const Activity = () => {
             <Calendar className={styles.calendar} />
           </div>
           <div className={styles.line}>
-            <h4 className={cn("h4", styles.title)}>Activity</h4>
+            <h4 className={cn('h4', styles.title)}>Activity</h4>
             <Export className={styles.export} />
           </div>
           <Table className={styles.table} items={table} />

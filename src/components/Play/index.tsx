@@ -1,6 +1,6 @@
-import cn from "classnames";
-import styles from "./Play.module.sass";
-import Icon from "@/components/Icon";
+import cn from 'classnames';
+import styles from './Play.module.sass';
+import Icon from '@/components/Icon';
 
 const Play = ({ className, small }: { className?: string; small?: boolean }) => {
   return (

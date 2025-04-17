@@ -1,34 +1,34 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./PaymentInfo.module.sass";
-import Icon from "@/components/Icon";
-import TextInput from "@/components/TextInput";
-import Checkbox from "@/components/Checkbox";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './PaymentInfo.module.sass';
+import Icon from '@/components/Icon';
+import TextInput from '@/components/TextInput';
+import Checkbox from '@/components/Checkbox';
 
 const options = [
   {
-    title: "Spend",
-    content: "$20.00",
-    color: "#9757D7",
-    icon: "wallet",
+    title: 'Spend',
+    content: '$20.00',
+    color: '#9757D7',
+    icon: 'wallet',
   },
   {
-    title: "Get",
-    content: "0.001499 BTC",
-    color: "#58BD7D",
-    icon: "wallet",
+    title: 'Get',
+    content: '0.001499 BTC',
+    color: '#58BD7D',
+    icon: 'wallet',
   },
 ];
 
 const cards = [
   {
-    image: "./images/content/visa.svg",
-    alt: "Visa",
+    image: './images/content/visa.svg',
+    alt: 'Visa',
   },
   {
-    image: "./images/content/master-card.svg",
-    alt: "Master Card",
+    image: './images/content/master-card.svg',
+    alt: 'Master Card',
   },
 ];
 
@@ -113,7 +113,7 @@ const PaymentInfo = ({ goNext, goBack }: { goNext: () => void; goBack: () => voi
         content="Save Card"
       />
       <div className={styles.btns}>
-        <button className={cn("button", styles.button)} onClick={goNext}>
+        <button className={cn('button', styles.button)} onClick={goNext}>
           Continue
         </button>
       </div>

@@ -1,14 +1,14 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./WalletMargin.module.sass";
-import Link from "next/link";
-import Wallet from "@/components/Wallet";
-import Main from "./Main";
-import Funds from "@/components/Funds";
-import Modal from "@/components/Modal";
-import Transfer from "@/components/Transfer";
-import Borrow from "@/components/Borrow";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './WalletMargin.module.sass';
+import Link from 'next/link';
+import Wallet from '@/components/Wallet';
+import Main from './Main';
+import Funds from '@/components/Funds';
+import Modal from '@/components/Modal';
+import Transfer from '@/components/Transfer';
+import Borrow from '@/components/Borrow';
 
 const WalletMargin = () => {
   const [visibleTransfer, setVisibleTransfer] = useState(false);
@@ -24,20 +24,20 @@ const WalletMargin = () => {
             <div className={styles.body}>
               <Funds>
                 <button
-                  className={cn("button-stroke button-small", styles.button)}
+                  className={cn('button-stroke button-small', styles.button)}
                   onClick={() => setVisibleTransfer(true)}
                 >
                   Transfer
                 </button>
                 <button
-                  className={cn("button-stroke button-small", styles.button)}
+                  className={cn('button-stroke button-small', styles.button)}
                   onClick={() => setVisibleBorrow(true)}
                 >
                   Borrow
                 </button>
                 <Link
-                  className={cn("button-stroke button-small", styles.button)}
-                 href="/theme/exchange"
+                  className={cn('button-stroke button-small', styles.button)}
+                  href="/theme/exchange"
                 >
                   Trade
                 </Link>
@@ -46,10 +46,7 @@ const WalletMargin = () => {
           </div>
         </div>
       </Wallet>
-      <Modal
-        visible={visibleTransfer}
-        onClose={() => setVisibleTransfer(false)}
-      >
+      <Modal visible={visibleTransfer} onClose={() => setVisibleTransfer(false)}>
         <Transfer />
       </Modal>
       <Modal visible={visibleBorrow} onClose={() => setVisibleBorrow(false)}>

@@ -1,44 +1,44 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./ConfirmOrder.module.sass";
-import Icon from "@/components/Icon";
-import Modal from "@/components/Modal";
-import Successfully from "./Successfully";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './ConfirmOrder.module.sass';
+import Icon from '@/components/Icon';
+import Modal from '@/components/Modal';
+import Successfully from './Successfully';
 
 const options = [
   {
-    title: "Spend",
-    content: "$20.00",
-    color: "#9757D7",
-    icon: "wallet",
+    title: 'Spend',
+    content: '$20.00',
+    color: '#9757D7',
+    icon: 'wallet',
   },
   {
-    title: "Get",
-    content: "0.001499 BTC",
-    color: "#58BD7D",
-    icon: "wallet",
+    title: 'Get',
+    content: '0.001499 BTC',
+    color: '#58BD7D',
+    icon: 'wallet',
   },
   {
-    title: "Method",
-    content: "Credit card",
-    color: "#4BC9F0",
-    icon: "wallet",
+    title: 'Method',
+    content: 'Credit card',
+    color: '#4BC9F0',
+    icon: 'wallet',
   },
 ];
 
 const parameters = [
   {
-    title: "0.001499",
-    content: "BTC",
+    title: '0.001499',
+    content: 'BTC',
   },
   {
-    title: "Service fee",
-    content: "0.000 BTC",
+    title: 'Service fee',
+    content: '0.000 BTC',
   },
   {
-    title: "You will pay",
-    content: "$20.00 USD",
+    title: 'You will pay',
+    content: '$20.00 USD',
   },
 ];
 
@@ -71,9 +71,7 @@ const ConfirmOrder = ({ goBack, goStart }: { goBack: () => void; goStart: () => 
             </div>
           ))}
         </div>
-        <div className={styles.info}>
-          You are about to buy 0.001499 BTC from Bitcloud
-        </div>
+        <div className={styles.info}>You are about to buy 0.001499 BTC from Bitcloud</div>
         <div className={styles.table}>
           {parameters.map((x, index) => (
             <div className={styles.row} key={index}>
@@ -83,24 +81,18 @@ const ConfirmOrder = ({ goBack, goStart }: { goBack: () => void; goStart: () => 
           ))}
         </div>
         <div className={styles.btns}>
-          <button
-            className={cn("button-stroke", styles.button)}
-            onClick={goStart}
-          >
+          <button className={cn('button-stroke', styles.button)} onClick={goStart}>
             Cancel
           </button>
           <button
-            className={cn("button", styles.button)}
+            className={cn('button', styles.button)}
             onClick={() => setVisibleSuccessfully(true)}
           >
             I understand, continue
           </button>
         </div>
       </div>
-      <Modal
-        visible={visibleSuccessfully}
-        onClose={() => setVisibleSuccessfully(false)}
-      >
+      <Modal visible={visibleSuccessfully} onClose={() => setVisibleSuccessfully(false)}>
         <Successfully />
       </Modal>
     </>

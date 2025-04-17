@@ -1,39 +1,39 @@
-import cn from "classnames";
-import Link from "next/link";
-import styles from "./Cards.module.sass";
+import cn from 'classnames';
+import Link from 'next/link';
+import styles from './Cards.module.sass';
 
 const items = [
   {
-    title: "BTC/USDT",
-    price: "36,641.20",
-    money: "36,641.20",
-    negative: "-0.79%",
-    image: "images/content/currency/bitcoin.svg",
-    url: "/exchange",
+    title: 'BTC/USDT',
+    price: '36,641.20',
+    money: '36,641.20',
+    negative: '-0.79%',
+    image: 'images/content/currency/bitcoin.svg',
+    url: '/exchange',
   },
   {
-    title: "BTC/USDT",
-    price: "36,641.20",
-    money: "36,641.20",
-    positive: "+0.79%",
-    image: "images/content/currency/chainlink.svg",
-    url: "/exchange",
+    title: 'BTC/USDT',
+    price: '36,641.20',
+    money: '36,641.20',
+    positive: '+0.79%',
+    image: 'images/content/currency/chainlink.svg',
+    url: '/exchange',
   },
   {
-    title: "BTC/USDT",
-    price: "36,641.20",
-    money: "36,641.20",
-    positive: "+0.79%",
-    image: "images/content/currency/monero.svg",
-    url: "/exchange",
+    title: 'BTC/USDT',
+    price: '36,641.20',
+    money: '36,641.20',
+    positive: '+0.79%',
+    image: 'images/content/currency/monero.svg',
+    url: '/exchange',
   },
   {
-    title: "BTC/USDT",
-    price: "36,641.20",
-    money: "36,641.20",
-    positive: "+0.79%",
-    image: "images/content/currency/maid.svg",
-    url: "/exchange",
+    title: 'BTC/USDT',
+    price: '36,641.20',
+    money: '36,641.20',
+    positive: '+0.79%',
+    image: 'images/content/currency/maid.svg',
+    url: '/exchange',
   },
 ];
 
@@ -48,12 +48,8 @@ const Cards = ({ className }: { className: string }) => {
           <div className={styles.details}>
             <div className={styles.line}>
               <div className={styles.title}>{x.title}</div>
-              {x.positive && (
-                <div className={styles.positive}>{x.positive}</div>
-              )}
-              {x.negative && (
-                <div className={styles.negative}>{x.negative}</div>
-              )}
+              {x.positive && <div className={styles.positive}>{x.positive}</div>}
+              {x.negative && <div className={styles.negative}>{x.negative}</div>}
             </div>
             <div className={styles.price}>{x.price}</div>
             <div className={styles.money}>{x.money}</div>

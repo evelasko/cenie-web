@@ -1,9 +1,9 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import OutsideClickHandler from "react-outside-click-handler";
-import styles from "./Dropdown.module.sass";
-import Icon from "@/components/Icon";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import OutsideClickHandler from 'react-outside-click-handler';
+import styles from './Dropdown.module.sass';
+import Icon from '@/components/Icon';
 type DropdownProps = {
   className?: string;
   classLabel?: string;
@@ -43,10 +43,7 @@ const Dropdown = ({
           [styles.active]: visible,
         })}
       >
-        <div
-          className={cn(classDropdownHead, styles.head)}
-          onClick={() => setVisible(!visible)}
-        >
+        <div className={cn(classDropdownHead, styles.head)} onClick={() => setVisible(!visible)}>
           <div className={styles.selection}>{value}</div>
           <div className={cn(styles.arrow, classDropdownArrow)}>
             <Icon name="arrow-down" size={24} />

@@ -1,8 +1,8 @@
-import cn from "classnames";
-import styles from "./Item.module.sass";
-import Icon from "@/components/Icon";
+import cn from 'classnames';
+import styles from './Item.module.sass';
+import Icon from '@/components/Icon';
 
-const Item = ({ className, item, index }: { className: string, item: any, index: number }) => {
+const Item = ({ className, item, index }: { className: string; item: any; index: number }) => {
   return (
     <div className={cn(className, styles.item, { [styles.active]: index < 3 })}>
       <div className={styles.icon}>

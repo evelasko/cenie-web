@@ -1,52 +1,52 @@
-import cn from "classnames";
-import styles from "./SessionsAndLoginHistory.module.sass";
-import Profile from "@/components/Profile";
-import Link from "next/link";
+import cn from 'classnames';
+import styles from './SessionsAndLoginHistory.module.sass';
+import Profile from '@/components/Profile';
+import Link from 'next/link';
 
 const breadcrumbs = [
   {
-    title: "Home",
-    url: "/",
+    title: 'Home',
+    url: '/',
   },
   {
-    title: "Sessions & login history",
+    title: 'Sessions & login history',
   },
 ];
 
 const sessions = [
   {
-    date: "2021-06-16",
-    time: "10:46:09",
-    device: "Macbook Pro",
-    system: "Mac OS Bigsur",
-    location: "🇺🇸 USA",
+    date: '2021-06-16',
+    time: '10:46:09',
+    device: 'Macbook Pro',
+    system: 'Mac OS Bigsur',
+    location: '🇺🇸 USA',
   },
   {
-    date: "2021-06-16",
-    time: "10:46:09",
-    device: "iMac Pro",
-    system: "Mac OS Bigsur",
-    location: "🇺🇸 USA",
+    date: '2021-06-16',
+    time: '10:46:09',
+    device: 'iMac Pro',
+    system: 'Mac OS Bigsur',
+    location: '🇺🇸 USA',
   },
 ];
 
 const history = [
   {
-    date: "2021-06-16",
-    time: "10:46:09",
-    address: "1.53.208.186",
+    date: '2021-06-16',
+    time: '10:46:09',
+    address: '1.53.208.186',
     status: true,
   },
   {
-    date: "2021-06-16",
-    time: "10:46:09",
-    address: "1.53.208.186",
+    date: '2021-06-16',
+    time: '10:46:09',
+    address: '1.53.208.186',
     status: false,
   },
   {
-    date: "2021-06-16",
-    time: "10:46:09",
-    address: "1.53.208.186",
+    date: '2021-06-16',
+    time: '10:46:09',
+    address: '1.53.208.186',
     status: true,
   },
 ];
@@ -73,17 +73,13 @@ const SessionsAndLoginHistory = () => {
                 <div className={styles.note}>{x.system}</div>
               </div>
               <div className={styles.col}>
-                <div className={cn("category", styles.location)}>
-                  {x.location}
-                </div>
+                <div className={cn('category', styles.location)}>{x.location}</div>
               </div>
             </div>
           ))}
         </div>
         <div className={styles.btns}>
-          <button className={cn("button-stroke", styles.button)}>
-            Log out all other devices
-          </button>
+          <button className={cn('button-stroke', styles.button)}>Log out all other devices</button>
         </div>
       </div>
       <div className={styles.section}>
@@ -105,16 +101,16 @@ const SessionsAndLoginHistory = () => {
               </div>
               <div className={styles.col}>
                 {x.status ? (
-                  <div className={cn("category-green", styles.status)}>yes</div>
+                  <div className={cn('category-green', styles.status)}>yes</div>
                 ) : (
-                  <div className={cn("category-red", styles.status)}>no</div>
+                  <div className={cn('category-red', styles.status)}>no</div>
                 )}
               </div>
             </div>
           ))}
         </div>
         <div className={styles.btns}>
-          <Link className={cn("button-stroke", styles.button)}href="/theme/contact">
+          <Link className={cn('button-stroke', styles.button)} href="/theme/contact">
             Contact us
           </Link>
         </div>

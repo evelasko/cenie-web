@@ -1,10 +1,10 @@
-import cn from "classnames";
-import styles from "./Verification.module.sass";
+import cn from 'classnames';
+import styles from './Verification.module.sass';
 
 const Verification = ({ goNext }) => {
   return (
     <form className={styles.form}>
-      <h3 className={cn("h3", styles.title)}>Security verification</h3>
+      <h3 className={cn('h3', styles.title)}>Security verification</h3>
       <div className={styles.info}>
         To secure your account, please complete the following verification.
       </div>
@@ -26,10 +26,8 @@ const Verification = ({ goNext }) => {
         </div>
       </div>
       <div className={styles.btns}>
-        <button className={cn("button-stroke button-small", styles.button)}>
-          Resend code
-        </button>
-        <button className={cn("button-small", styles.button)} onClick={goNext}>
+        <button className={cn('button-stroke button-small', styles.button)}>Resend code</button>
+        <button className={cn('button-small', styles.button)} onClick={goNext}>
           Continue
         </button>
       </div>

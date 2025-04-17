@@ -1,28 +1,28 @@
-import cn from "classnames";
-import styles from "./PaymentDetails.module.sass";
-import Link from "next/link";
-import Icon from "@/components/Icon";
+import cn from 'classnames';
+import styles from './PaymentDetails.module.sass';
+import Link from 'next/link';
+import Icon from '@/components/Icon';
 
 const items = [
   {
-    title: "Account name",
-    content: "Veum Cecilia",
+    title: 'Account name',
+    content: 'Veum Cecilia',
   },
   {
-    title: "Account number",
-    content: "548422222221",
+    title: 'Account number',
+    content: '548422222221',
   },
   {
-    title: "Address",
-    content: "079 Dariana Knoll, CA",
+    title: 'Address',
+    content: '079 Dariana Knoll, CA',
   },
   {
-    title: "SWIFT Code",
-    content: "UI8",
+    title: 'SWIFT Code',
+    content: 'UI8',
   },
   {
-    title: "Bank Address",
-    content: "55416 Powlowski Spring, CA",
+    title: 'Bank Address',
+    content: '55416 Powlowski Spring, CA',
   },
 ];
 
@@ -46,15 +46,12 @@ const PaymentDetails = () => {
       </div>
       <div className={styles.info}>Reference code</div>
       <div className={styles.text}>
-        You MUST include the Reference Code in your deposit in order to credit
-        your account! <br></br>Reference Code:
+        You MUST include the Reference Code in your deposit in order to credit your account!{' '}
+        <br></br>Reference Code:
       </div>
       <div className={styles.code}>BLUTUKHY34PB</div>
       <div className={styles.btns}>
-        <Link
-          className={cn("button-stroke", styles.button)}
-         href="/theme/wallet-overview"
-        >
+        <Link className={cn('button-stroke', styles.button)} href="/theme/wallet-overview">
           View wallet
         </Link>
       </div>

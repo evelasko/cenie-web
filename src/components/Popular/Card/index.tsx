@@ -1,6 +1,6 @@
-import cn from "classnames";
-import styles from "./Card.module.sass";
-import Link from "next/link";
+import cn from 'classnames';
+import styles from './Card.module.sass';
+import Link from 'next/link';
 
 const Card = ({ className, item }: { className?: string; item: any }) => {
   return (
@@ -10,10 +10,7 @@ const Card = ({ className, item }: { className?: string; item: any }) => {
       </div>
       <div className={styles.title}>{item.title}</div>
       <div className={styles.content}>{item.content}</div>
-      <Link
-        className={cn("button-stroke button-small", styles.button)}
-        href={item.url}
-      >
+      <Link className={cn('button-stroke button-small', styles.button)} href={item.url}>
         {item.button}
       </Link>
     </div>

@@ -1,6 +1,6 @@
-import Link from "next/link";
-import cn from "classnames";
-import styles from "./Login.module.sass";
+import Link from 'next/link';
+import cn from 'classnames';
+import styles from './Login.module.sass';
 
 type LoginProps = {
   className?: string;
@@ -9,13 +9,13 @@ type LoginProps = {
   linkUrl: string;
   children: React.ReactNode;
 };
-const Login = ({ className, content, linkText, linkUrl, children }: LoginProps ) => {
+const Login = ({ className, content, linkText, linkUrl, children }: LoginProps) => {
   return (
     <div className={cn(className, styles.login)}>
       <div
         className={styles.col}
         style={{
-          backgroundImage: "url(/images/content/bg-login.png)",
+          backgroundImage: 'url(/images/content/bg-login.png)',
         }}
       >
         <Link className={styles.logo} href="/">

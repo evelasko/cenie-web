@@ -1,7 +1,7 @@
-import Main from "./Main";
-import Education from "./Education";
-import Faq from "./Faq";
-import Question from "./Question";
+import Main from './Main';
+import Education from './Education';
+import Faq from './Faq';
+import Question from './Question';
 
 const Home = () => {
   return (

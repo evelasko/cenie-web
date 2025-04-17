@@ -1,6 +1,20 @@
-import useDarkMode from "use-dark-mode";
+import useDarkMode from 'use-dark-mode';
 
-const Image = ({ className, src, srcDark, srcSet, srcSetDark, alt }: { className?: string; src: string; srcDark?: string; srcSet?: string; srcSetDark?: string; alt: string }) => {
+const Image = ({
+  className,
+  src,
+  srcDark,
+  srcSet,
+  srcSetDark,
+  alt,
+}: {
+  className?: string;
+  src: string;
+  srcDark?: string;
+  srcSet?: string;
+  srcSetDark?: string;
+  alt: string;
+}) => {
   const darkMode = useDarkMode(false);
 
   return (

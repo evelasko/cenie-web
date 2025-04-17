@@ -1,8 +1,8 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Integrations.module.sass";
-import Icon from "@/components/Icon";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Integrations.module.sass';
+import Icon from '@/components/Icon';
 
 const Integrations = () => {
   const [integrations1, setIntegrations1] = useState(false);
@@ -12,34 +12,31 @@ const Integrations = () => {
 
   const items = [
     {
-      title: "Tokocrypto",
+      title: 'Tokocrypto',
       content:
-        "Trade with Indonesian rupiah. Deposit and withdraw instantly with direct bank transfer.",
-      name: "integrations1",
+        'Trade with Indonesian rupiah. Deposit and withdraw instantly with direct bank transfer.',
+      name: 'integrations1',
       value: integrations1,
       setValue: setIntegrations1,
     },
     {
-      title: "WazirX",
-      content:
-        "Trade with WazirX. Deposit and withdraw instantly with direct bank transfer.",
-      name: "integrations2",
+      title: 'WazirX',
+      content: 'Trade with WazirX. Deposit and withdraw instantly with direct bank transfer.',
+      name: 'integrations2',
       value: integrations2,
       setValue: setIntegrations2,
     },
     {
-      title: "Poloniex",
-      content:
-        "Trade with Poloniex. Deposit and withdraw instantly with direct bank transfer.",
-      name: "integrations3",
+      title: 'Poloniex',
+      content: 'Trade with Poloniex. Deposit and withdraw instantly with direct bank transfer.',
+      name: 'integrations3',
       value: integrations3,
       setValue: setIntegrations3,
     },
     {
-      title: "Binance",
-      content:
-        "Trade with Binance. Deposit and withdraw instantly with direct bank transfer.",
-      name: "integrations4",
+      title: 'Binance',
+      content: 'Trade with Binance. Deposit and withdraw instantly with direct bank transfer.',
+      name: 'integrations4',
       value: integrations4,
       setValue: setIntegrations4,
     },
@@ -81,9 +78,7 @@ const Integrations = () => {
                 checked={!x.value}
               />
               <span className={styles.inner}>
-                <span
-                  className={cn("button-stroke button-small", styles.button)}
-                >
+                <span className={cn('button-stroke button-small', styles.button)}>
                   <span className={styles.text}>
                     <span>Active</span>
                     <span>Deactive</span>

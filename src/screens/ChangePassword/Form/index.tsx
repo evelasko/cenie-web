@@ -1,11 +1,11 @@
-import cn from "classnames";
-import styles from "./Form.module.sass";
-import TextInput from "@/components/TextInput";
+import cn from 'classnames';
+import styles from './Form.module.sass';
+import TextInput from '@/components/TextInput';
 
 const Form = ({ goFinish }: { goFinish: () => void }) => {
   return (
     <form className={styles.form}>
-      <div className={cn("h3", styles.title)}>New password</div>
+      <div className={cn('h3', styles.title)}>New password</div>
       <TextInput
         className={styles.field}
         label="email"
@@ -32,7 +32,7 @@ const Form = ({ goFinish }: { goFinish: () => void }) => {
         required
         view
       />
-      <button className={cn("button", styles.button)} onClick={goFinish}>
+      <button className={cn('button', styles.button)} onClick={goFinish}>
         Change password
       </button>
     </form>

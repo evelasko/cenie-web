@@ -1,43 +1,51 @@
-import cn from "classnames";
-import styles from "./Popular.module.sass";
-import Slider from "react-slick";
-import Link from "next/link";
-import Icon from "@/components/Icon";
-import Card from "./Card";
+import cn from 'classnames';
+import styles from './Popular.module.sass';
+import Slider from 'react-slick';
+import Link from 'next/link';
+import Icon from '@/components/Icon';
+import Card from './Card';
 
 const items = [
   {
-    title: "Buy & Sell Crypto",
+    title: 'Buy & Sell Crypto',
     content:
-      "We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.",
-    button: "Buy crypto",
-    image: "/images/content/card-pic-1.png",
-    image2x: "/images/content/card-pic-1@2x.png",
-    url: "/buy-crypto",
+      'We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.',
+    button: 'Buy crypto',
+    image: '/images/content/card-pic-1.png',
+    image2x: '/images/content/card-pic-1@2x.png',
+    url: '/buy-crypto',
   },
   {
-    title: "Trade Assets",
+    title: 'Trade Assets',
     content:
-      "We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.",
-    button: "Trade now",
-    image: "/images/content/card-pic-2.png",
-    image2x: "/images/content/card-pic-2@2x.png",
-    url: "/exchange",
+      'We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.',
+    button: 'Trade now',
+    image: '/images/content/card-pic-2.png',
+    image2x: '/images/content/card-pic-2@2x.png',
+    url: '/exchange',
   },
   {
-    title: "Learn crypto",
+    title: 'Learn crypto',
     content:
-      "We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.",
-    button: "Learn now",
-    image: "/images/content/card-pic-3.png",
-    image2x: "/images/content/card-pic-3@2x.png",
-    url: "/learn-crypto",
+      'We realize ideas from simple to complex, everything becomes easy to use and reach the most potential customers.',
+    button: 'Learn now',
+    image: '/images/content/card-pic-3.png',
+    image2x: '/images/content/card-pic-3@2x.png',
+    url: '/learn-crypto',
   },
 ];
 
-const SlickArrow = ({ currentSlide, slideCount, children, ...props }: { currentSlide: number; slideCount: number; children: React.ReactNode; props: React.ButtonHTMLAttributes<HTMLButtonElement> }) => (
-  <button {...props}>{children}</button>
-);
+const SlickArrow = ({
+  currentSlide,
+  slideCount,
+  children,
+  ...props
+}: {
+  currentSlide: number;
+  slideCount: number;
+  children: React.ReactNode;
+  props: React.ButtonHTMLAttributes<HTMLButtonElement>;
+}) => <button {...props}>{children}</button>;
 
 const Popular = ({ classSection }: { classSection?: string }) => {
   const settings = {
@@ -94,14 +102,10 @@ const Popular = ({ classSection }: { classSection?: string }) => {
 
   return (
     <div className={cn(classSection, styles.section)}>
-      <div className={cn("container", styles.container)}>
+      <div className={cn('container', styles.container)}>
         <div className={styles.head}>
-          <h2 className={cn("h2", styles.title)}>
-            Become a crypto trader in seconds
-          </h2>
-          <div className={styles.info}>
-            We've got everything you need to start trading.
-          </div>
+          <h2 className={cn('h2', styles.title)}>Become a crypto trader in seconds</h2>
+          <div className={styles.info}>We've got everything you need to start trading.</div>
         </div>
         <div className={styles.wrapper}>
           <Slider className="popular-slider" {...settings}>
@@ -111,7 +115,7 @@ const Popular = ({ classSection }: { classSection?: string }) => {
           </Slider>
         </div>
         <div className={styles.btns}>
-          <Link className={cn("button", styles.button)} href="/contact">
+          <Link className={cn('button', styles.button)} href="/contact">
             Contact Us
           </Link>
         </div>

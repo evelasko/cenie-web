@@ -1,9 +1,17 @@
-import cn from "classnames";
-import styles from "./Theme.module.sass";
-import useDarkMode from "use-dark-mode";
-import Icon from "@/components/Icon";
+import cn from 'classnames';
+import styles from './Theme.module.sass';
+import useDarkMode from 'use-dark-mode';
+import Icon from '@/components/Icon';
 
-const Theme = ({ className, icon, small }: { className?: string; icon?: boolean; small?: boolean }) => {
+const Theme = ({
+  className,
+  icon,
+  small,
+}: {
+  className?: string;
+  icon?: boolean;
+  small?: boolean;
+}) => {
   const darkMode = useDarkMode(false);
 
   return (

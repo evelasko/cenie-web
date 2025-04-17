@@ -1,14 +1,14 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Transfer.module.sass";
-import Icon from "@/components/Icon";
-import TextInput from "@/components/TextInput";
-import Dropdown from "@/components/Dropdown";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Transfer.module.sass';
+import Icon from '@/components/Icon';
+import TextInput from '@/components/TextInput';
+import Dropdown from '@/components/Dropdown';
 
-const fromDirectionOptions = ["Margin", "Fiat and Spot"];
-const toDirectionOptions = ["Fiat and Spot", "Margin"];
-const coinOptions = ["ETH Ethereum", "BTC Bitcoin", "TRX Tron"];
+const fromDirectionOptions = ['Margin', 'Fiat and Spot'];
+const toDirectionOptions = ['Fiat and Spot', 'Margin'];
+const coinOptions = ['ETH Ethereum', 'BTC Bitcoin', 'TRX Tron'];
 
 const Transfer = () => {
   const [fromDirection, setFromDirection] = useState(fromDirectionOptions[0]);
@@ -17,7 +17,7 @@ const Transfer = () => {
 
   return (
     <div className={styles.transfer}>
-      <div className={cn("h4", styles.title)}>
+      <div className={cn('h4', styles.title)}>
         <Icon name="arrow-left" size={32} />
         Transfer
       </div>
@@ -69,11 +69,9 @@ const Transfer = () => {
           note="2.14646231064565653 ETH available"
           required
         />
-        <button className={cn("button-stroke button-small", styles.button)}>
-          Max amount
-        </button>
+        <button className={cn('button-stroke button-small', styles.button)}>Max amount</button>
       </div>
-      <button className={cn("button", styles.button)}>Transfer</button>
+      <button className={cn('button', styles.button)}>Transfer</button>
     </div>
   );
 };

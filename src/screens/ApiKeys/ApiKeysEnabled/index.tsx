@@ -1,15 +1,13 @@
-import cn from "classnames";
-import styles from "./ApiKeysEnabled.module.sass";
-import TextInput from "@/components/TextInput";
-import Icon from "@/components/Icon";
+import cn from 'classnames';
+import styles from './ApiKeysEnabled.module.sass';
+import TextInput from '@/components/TextInput';
+import Icon from '@/components/Icon';
 
 const ApiKeysEnabled = ({ goNext }: { goNext: () => void }) => {
   return (
     <div>
-      <div className={styles.stage}>
-        Enable API access on your account to generate keys.
-      </div>
-      <div className={cn("h3", styles.title)}>
+      <div className={styles.stage}>Enable API access on your account to generate keys.</div>
+      <div className={cn('h3', styles.title)}>
         API Access is <span>Enabled</span>
       </div>
       <div className={styles.email}>
@@ -32,7 +30,7 @@ const ApiKeysEnabled = ({ goNext }: { goNext: () => void }) => {
               <button className={styles.remove}>
                 <Icon name="close" size={24} />
               </button>
-              <div className={cn("category", styles.category)}>copied</div>
+              <div className={cn('category', styles.category)}>copied</div>
             </div>
             <div className={styles.box}>
               <TextInput
@@ -46,10 +44,10 @@ const ApiKeysEnabled = ({ goNext }: { goNext: () => void }) => {
               <button className={styles.remove}>
                 <Icon name="close" size={24} />
               </button>
-              <div className={cn("category", styles.category)}>copied</div>
+              <div className={cn('category', styles.category)}>copied</div>
             </div>
           </div>
-          <button className={cn("button-stroke button-small", styles.button)}>
+          <button className={cn('button-stroke button-small', styles.button)}>
             <Icon name="plus" size={16} />
             <span>Generate new API key</span>
           </button>
@@ -69,15 +67,9 @@ const ApiKeysEnabled = ({ goNext }: { goNext: () => void }) => {
               required
               view
             />
-            <TextInput
-              className={styles.field}
-              label="2FA code"
-              name="code"
-              type="text"
-              required
-            />
+            <TextInput className={styles.field} label="2FA code" name="code" type="text" required />
           </div>
-          <button className={cn("button", styles.button)} onClick={goNext}>
+          <button className={cn('button', styles.button)} onClick={goNext}>
             Disable API keys
           </button>
         </div>

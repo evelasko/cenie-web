@@ -1,28 +1,32 @@
-import cn from "classnames";
-import styles from "./Main.module.sass";
-import Play from "@/components/Play";
+import cn from 'classnames';
+import styles from './Main.module.sass';
+import Play from '@/components/Play';
 
-const Main = ({ scrollToRef, scrollToRefCatalog }: { scrollToRef: React.RefObject<HTMLDivElement> | React.RefObject<null>, scrollToRefCatalog: React.RefObject<HTMLDivElement> | React.RefObject<null> }) => {
+const Main = ({
+  scrollToRef,
+  scrollToRefCatalog,
+}: {
+  scrollToRef: React.RefObject<HTMLDivElement> | React.RefObject<null>;
+  scrollToRefCatalog: React.RefObject<HTMLDivElement> | React.RefObject<null>;
+}) => {
   return (
-    <div className={cn("section", styles.main)}>
-      <div className={cn("container", styles.container)}>
+    <div className={cn('section', styles.main)}>
+      <div className={cn('container', styles.container)}>
         <div className={styles.head}>
-          <h1 className={cn("h1", styles.title)}>Blockchain & Crypto</h1>
+          <h1 className={cn('h1', styles.title)}>Blockchain & Crypto</h1>
           <div className={styles.info}>A Beginner's Guide to TradingView</div>
           <div className={styles.btns}>
             <button
-              className={cn("button", styles.button)}
-              onClick={() =>
-                scrollToRef?.current?.scrollIntoView({ behavior: "smooth" })
-              }
+              className={cn('button', styles.button)}
+              onClick={() => scrollToRef?.current?.scrollIntoView({ behavior: 'smooth' })}
             >
               Learn now
             </button>
             <button
-              className={cn("button-stroke", styles.button)}
+              className={cn('button-stroke', styles.button)}
               onClick={() =>
                 scrollToRefCatalog?.current?.scrollIntoView({
-                  behavior: "smooth",
+                  behavior: 'smooth',
                 })
               }
             >

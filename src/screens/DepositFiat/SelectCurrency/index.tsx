@@ -1,17 +1,17 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./SelectCurrency.module.sass";
-import Dropdown from "@/components/Dropdown";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './SelectCurrency.module.sass';
+import Dropdown from '@/components/Dropdown';
 
-const currencyOptions = ["USD", "EUR", "RUB"];
-const paymentOptions = ["Bank (SWIFT)", "Bank (EUR)", "Bank (USD)"];
-const priceVariants = ["50.00$", "100.00$", "200.00$", "500.00$"];
+const currencyOptions = ['USD', 'EUR', 'RUB'];
+const paymentOptions = ['Bank (SWIFT)', 'Bank (EUR)', 'Bank (USD)'];
+const priceVariants = ['50.00$', '100.00$', '200.00$', '500.00$'];
 
 const SelectCurrency = ({ goNext }: { goNext: () => void }) => {
   const [currency, setCurrency] = useState(currencyOptions[0]);
   const [payment, setPayment] = useState(paymentOptions[0]);
-  const [price, setPrice] = useState("50.00");
+  const [price, setPrice] = useState('50.00');
 
   const handleSubmit = (e: any) => {
     alert();
@@ -44,14 +44,10 @@ const SelectCurrency = ({ goNext }: { goNext: () => void }) => {
       </div>
       <div className={styles.label}>Amount</div>
       <div className={styles.payment}>
-        <div className={cn("h4", styles.sign)}>$</div>
+        <div className={cn('h4', styles.sign)}>$</div>
         <div className={styles.field}>
           <div className={styles.value}>{price}</div>
-          <input
-            className={styles.input}
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-          />
+          <input className={styles.input} value={price} onChange={e => setPrice(e.target.value)} />
         </div>
       </div>
       <div className={styles.price}>
@@ -60,9 +56,9 @@ const SelectCurrency = ({ goNext }: { goNext: () => void }) => {
       <div className={styles.variants}>
         {priceVariants.map((x, index) => (
           <button
-            className={cn("button-stroke button-small", styles.button)}
+            className={cn('button-stroke button-small', styles.button)}
             type="button"
-            onClick={() => setPrice(x.replace("$", ""))}
+            onClick={() => setPrice(x.replace('$', ''))}
             key={index}
           >
             {x}
@@ -70,7 +66,7 @@ const SelectCurrency = ({ goNext }: { goNext: () => void }) => {
         ))}
       </div>
       <div className={styles.btns}>
-        <button className={cn("button", styles.button)} onClick={goNext}>
+        <button className={cn('button', styles.button)} onClick={goNext}>
           Continue
         </button>
       </div>

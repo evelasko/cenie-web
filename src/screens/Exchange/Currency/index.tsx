@@ -1,85 +1,85 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Currency.module.sass";
-import Icon from "@/components/Icon";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Currency.module.sass';
+import Icon from '@/components/Icon';
 
-const navigation = ["All", "Cross", "Isolated"];
+const navigation = ['All', 'Cross', 'Isolated'];
 
 const items = [
   {
-    title: "ETC",
-    currency: "BTC",
-    positive: "0.01052",
-    volume: "4,189",
+    title: 'ETC',
+    currency: 'BTC',
+    positive: '0.01052',
+    volume: '4,189',
   },
   {
-    title: "NULS",
-    currency: "BTC",
-    negative: "0.00001",
-    volume: "16",
+    title: 'NULS',
+    currency: 'BTC',
+    negative: '0.00001',
+    volume: '16',
   },
   {
-    title: "NEO",
-    currency: "BTC",
-    positive: "0.01057",
-    volume: "199",
+    title: 'NEO',
+    currency: 'BTC',
+    positive: '0.01057',
+    volume: '199',
   },
   {
-    title: "LINK",
-    currency: "BTC",
-    negative: "0.0007",
-    volume: "1,371",
+    title: 'LINK',
+    currency: 'BTC',
+    negative: '0.0007',
+    volume: '1,371',
   },
   {
-    title: "IOTA",
-    currency: "BTC",
-    positive: "0.0003",
-    volume: "186",
+    title: 'IOTA',
+    currency: 'BTC',
+    positive: '0.0003',
+    volume: '186',
   },
   {
-    title: "ETC",
-    currency: "BTC",
-    negative: "0.00017",
-    volume: "833",
+    title: 'ETC',
+    currency: 'BTC',
+    negative: '0.00017',
+    volume: '833',
   },
   {
-    title: "KNC",
-    currency: "BTC",
-    negative: "0.00022",
-    volume: "160",
+    title: 'KNC',
+    currency: 'BTC',
+    negative: '0.00022',
+    volume: '160',
   },
   {
-    title: "WTC",
-    currency: "BTC",
-    negative: "0.0002",
-    volume: "32",
+    title: 'WTC',
+    currency: 'BTC',
+    negative: '0.0002',
+    volume: '32',
   },
   {
-    title: "EOS",
-    currency: "BTC",
-    positive: "0.0022",
-    volume: "1,578",
+    title: 'EOS',
+    currency: 'BTC',
+    positive: '0.0022',
+    volume: '1,578',
   },
   {
-    title: "BTC",
-    currency: "BTC",
-    positive: "36,779",
-    volume: "3,477,216",
+    title: 'BTC',
+    currency: 'BTC',
+    positive: '36,779',
+    volume: '3,477,216',
   },
   {
-    title: "GAS",
-    currency: "BTC",
-    positive: "0.0002",
-    volume: "4,189",
+    title: 'GAS',
+    currency: 'BTC',
+    positive: '0.0002',
+    volume: '4,189',
   },
 ];
 
 const Currency = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     alert();
   };
 
@@ -103,7 +103,7 @@ const Currency = () => {
           className={styles.input}
           type="text"
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={e => setSearch(e.target.value)}
           name="search"
           placeholder="Search"
           required
@@ -128,7 +128,7 @@ const Currency = () => {
           <div className={styles.row} key={index}>
             <div className={styles.col}>
               <div className={styles.line}>
-                <button className={cn("favorite", styles.favorite)}>
+                <button className={cn('favorite', styles.favorite)}>
                   <Icon name="star-outline" size="16" />
                 </button>
                 <div className={styles.info}>
@@ -138,12 +138,8 @@ const Currency = () => {
               </div>
             </div>
             <div className={styles.col}>
-              {x.positive && (
-                <div className={styles.positive}>{x.positive}</div>
-              )}
-              {x.negative && (
-                <div className={styles.negative}>{x.negative}</div>
-              )}
+              {x.positive && <div className={styles.positive}>{x.positive}</div>}
+              {x.negative && <div className={styles.negative}>{x.negative}</div>}
             </div>
             <div className={styles.col}>{x.volume}</div>
           </div>

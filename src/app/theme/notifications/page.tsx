@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import Notifications from "@/screens/Notifications";
+import Page from '@/components/Page';
+import Notifications from '@/screens/Notifications';
 
 export default function HomePage() {
   return (

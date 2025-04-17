@@ -1,5 +1,5 @@
-import cn from "classnames";
-import styles from "./Scan.module.sass";
+import cn from 'classnames';
+import styles from './Scan.module.sass';
 
 const Scan = () => {
   return (
@@ -8,9 +8,7 @@ const Scan = () => {
         <div className={styles.code}>
           <img src="/images/content/qr-code.jpg" alt="Qr code" />
         </div>
-        <button className={cn("button-stroke", styles.button)}>
-          Download app
-        </button>
+        <button className={cn('button-stroke', styles.button)}>Download app</button>
       </div>
     </div>
   );

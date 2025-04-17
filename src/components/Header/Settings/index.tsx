@@ -1,26 +1,26 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Settings.module.sass";
-import OutsideClickHandler from "react-outside-click-handler";
-import Icon from "@/components/Icon";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Settings.module.sass';
+import OutsideClickHandler from 'react-outside-click-handler';
+import Icon from '@/components/Icon';
 
 const language = [
   {
-    title: "English",
-    flag: "🇺🇸",
+    title: 'English',
+    flag: '🇺🇸',
   },
   {
-    title: "Vietnamese",
-    flag: "🇻🇳",
+    title: 'Vietnamese',
+    flag: '🇻🇳',
   },
   {
-    title: "Russia",
-    flag: "🇷🇺",
+    title: 'Russia',
+    flag: '🇷🇺',
   },
 ];
 
-const currency = ["USD", "RUB", "EUR", "JPY", "BTC"];
+const currency = ['USD', 'RUB', 'EUR', 'JPY', 'BTC'];
 
 const Settings = ({ className }: { className: string }) => {
   const [visible, setVisible] = useState(false);

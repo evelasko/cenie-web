@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import DepositFiat from "@/screens/DepositFiat";
+import Page from '@/components/Page';
+import DepositFiat from '@/screens/DepositFiat';
 
 export default function DepositFiatPage() {
   return (
@@ -7,4 +7,4 @@ export default function DepositFiatPage() {
       <DepositFiat />
     </Page>
   );
-} 
+}

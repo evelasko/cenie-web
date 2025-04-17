@@ -1,16 +1,15 @@
-import cn from "classnames";
-import styles from "./Form.module.sass";
-import Link from "next/link";
-import TextInput from "@/components/TextInput";
+import cn from 'classnames';
+import styles from './Form.module.sass';
+import Link from 'next/link';
+import TextInput from '@/components/TextInput';
 
 const Form = ({ goNext }: { goNext: () => void }) => {
   return (
     <form className={styles.form}>
       <div className={styles.top}>
-        <h3 className={cn("h3", styles.title)}>Forgot password</h3>
+        <h3 className={cn('h3', styles.title)}>Forgot password</h3>
         <div className={styles.info}>
-          For security purposes, no withdrawals are permitted for 24 hours after
-          password changed.
+          For security purposes, no withdrawals are permitted for 24 hours after password changed.
         </div>
       </div>
       <div className={styles.fieldset}>
@@ -24,11 +23,11 @@ const Form = ({ goNext }: { goNext: () => void }) => {
           required
         />
       </div>
-      <button className={cn("button", styles.button)} onClick={goNext}>
+      <button className={cn('button', styles.button)} onClick={goNext}>
         Continue
       </button>
       <div className={styles.foot}>
-        <Link className={styles.link}href="/theme/sign-in">
+        <Link className={styles.link} href="/theme/sign-in">
           Nevermind, I got it
         </Link>
       </div>

@@ -1,13 +1,13 @@
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import cn from "classnames";
-import styles from "./Form.module.sass";
-import Dropdown from "@/components/Dropdown";
-import TextInput from "@/components/TextInput";
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import cn from 'classnames';
+import styles from './Form.module.sass';
+import Dropdown from '@/components/Dropdown';
+import TextInput from '@/components/TextInput';
 
-const navigation = ["Email", "Mobile"];
-const optionsPhone = ["🇺🇸 +1", "🇻🇳 +3", "🇷🇺 +7"];
+const navigation = ['Email', 'Mobile'];
+const optionsPhone = ['🇺🇸 +1', '🇻🇳 +3', '🇷🇺 +7'];
 
 const Form = ({ onScan }: { onScan: () => void }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -51,12 +51,7 @@ const Form = ({ onScan }: { onScan: () => void }) => {
                 options={optionsPhone}
               />
             </div>
-            <TextInput
-              className={styles.field}
-              name="phone"
-              type="tel"
-              required
-            />
+            <TextInput className={styles.field} name="phone" type="tel" required />
           </div>
         )}
       </div>
@@ -73,11 +68,11 @@ const Form = ({ onScan }: { onScan: () => void }) => {
         <button className={styles.scan} onClick={onScan}>
           Scan to login
         </button>
-        <Link className={styles.link}href="/theme/forgot-password">
+        <Link className={styles.link} href="/theme/forgot-password">
           Forgot password?
         </Link>
       </div>
-      <button className={cn("button", styles.button)}>Login</button>
+      <button className={cn('button', styles.button)}>Login</button>
     </form>
   );
 };

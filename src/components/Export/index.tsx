@@ -1,11 +1,11 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Export.module.sass";
-import Icon from "@/components/Icon";
-import OutsideClickHandler from "react-outside-click-handler";
-import DatePicker from "react-datepicker";
-import { format } from "date-fns";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Export.module.sass';
+import Icon from '@/components/Icon';
+import OutsideClickHandler from 'react-outside-click-handler';
+import DatePicker from 'react-datepicker';
+import { format } from 'date-fns';
 
 const Export = ({ className }: { className: string }) => {
   const [visible, setVisible] = useState(false);
@@ -21,11 +21,7 @@ const Export = ({ className }: { className: string }) => {
     <OutsideClickHandler onOutsideClick={() => setVisible(false)}>
       <div className={cn(className, styles.export)}>
         <button
-          className={cn(
-            "button-small",
-            { [styles.active]: visible },
-            styles.button
-          )}
+          className={cn('button-small', { [styles.active]: visible }, styles.button)}
           onClick={() => setVisible(!visible)}
         >
           <Icon name="arrow-bottom" size={16} />
@@ -36,21 +32,17 @@ const Export = ({ className }: { className: string }) => {
             selected={startDate}
             onChange={onChange}
             startDate={startDate}
-            dateFormatCalendar={"MMM yyyy"}
+            dateFormatCalendar={'MMM yyyy'}
             endDate={endDate}
             selectsRange
             inline
           />
           {startDate && endDate && (
             <div className={styles.interval}>
-              {format(startDate, "dd MMM yyyy")} -{" "}
-              {format(endDate, "dd MMM yyyy")}
+              {format(startDate, 'dd MMM yyyy')} - {format(endDate, 'dd MMM yyyy')}
             </div>
           )}
-          <button
-            className={cn("button", styles.button)}
-            disabled={!startDate && !endDate}
-          >
+          <button className={cn('button', styles.button)} disabled={!startDate && !endDate}>
             Download .CSV
           </button>
         </div>

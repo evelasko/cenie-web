@@ -1,54 +1,66 @@
-"use client";
-import { useState } from "react";
-import cn from "classnames";
-import styles from "./Learn.module.sass";
-import Link from "next/link";
-import Slider, { ResponsiveObject } from "react-slick";
-import Icon from "@/components/Icon";
-import Play from "@/components/Play";
+'use client';
+import { useState } from 'react';
+import cn from 'classnames';
+import styles from './Learn.module.sass';
+import Link from 'next/link';
+import Slider, { ResponsiveObject } from 'react-slick';
+import Icon from '@/components/Icon';
+import Play from '@/components/Play';
 
-const navigation = ["All", "Bitcoin", "Blockchain", "Tutorial"];
+const navigation = ['All', 'Bitcoin', 'Blockchain', 'Tutorial'];
 
 const items = [
   {
-    title: "Leveraged tokens now available",
-    content: "Good things come in 3s. Get 3x Leveraged tokens now.",
-    image: "/images/content/learn-pic-1.jpg",
-    image2x: "/images/content/learn-pic-1@2x.jpg",
-    url: "/learn-crypto-details",
+    title: 'Leveraged tokens now available',
+    content: 'Good things come in 3s. Get 3x Leveraged tokens now.',
+    image: '/images/content/learn-pic-1.jpg',
+    image2x: '/images/content/learn-pic-1@2x.jpg',
+    url: '/learn-crypto-details',
   },
   {
-    title: "Leveraged tokens now available",
-    content: "Good things come in 3s. Get 3x Leveraged tokens now.",
-    date: "Jun 1, 2021",
-    image: "/images/content/learn-pic-2.jpg",
-    image2x: "/images/content/learn-pic-2@2x.jpg",
-    url: "/learn-crypto-details",
+    title: 'Leveraged tokens now available',
+    content: 'Good things come in 3s. Get 3x Leveraged tokens now.',
+    date: 'Jun 1, 2021',
+    image: '/images/content/learn-pic-2.jpg',
+    image2x: '/images/content/learn-pic-2@2x.jpg',
+    url: '/learn-crypto-details',
   },
   {
-    title: "Leveraged tokens now available",
-    content: "Good things come in 3s. Get 3x Leveraged tokens now.",
-    date: "Jun 1, 2021",
+    title: 'Leveraged tokens now available',
+    content: 'Good things come in 3s. Get 3x Leveraged tokens now.',
+    date: 'Jun 1, 2021',
     play: true,
-    image: "/images/content/learn-pic-4.jpg",
-    image2x: "/images/content/learn-pic-4@2x.jpg",
-    url: "/learn-crypto-details",
+    image: '/images/content/learn-pic-4.jpg',
+    image2x: '/images/content/learn-pic-4@2x.jpg',
+    url: '/learn-crypto-details',
   },
   {
-    title: "Leveraged tokens now available",
-    content: "Good things come in 3s. Get 3x Leveraged tokens now.",
-    date: "Jun 1, 2021",
-    image: "/images/content/learn-pic-3.jpg",
-    image2x: "/images/content/learn-pic-3@2x.jpg",
-    url: "/learn-crypto-details",
+    title: 'Leveraged tokens now available',
+    content: 'Good things come in 3s. Get 3x Leveraged tokens now.',
+    date: 'Jun 1, 2021',
+    image: '/images/content/learn-pic-3.jpg',
+    image2x: '/images/content/learn-pic-3@2x.jpg',
+    url: '/learn-crypto-details',
   },
 ];
 
-const SlickArrow = ({ currentSlide, slideCount, children, ...props }: { currentSlide?: number, slideCount?: number, children: React.ReactNode, props?: any }) => (
-  <button {...props}>{children}</button>
-);
+const SlickArrow = ({
+  currentSlide,
+  slideCount,
+  children,
+  ...props
+}: {
+  currentSlide?: number;
+  slideCount?: number;
+  children: React.ReactNode;
+  props?: any;
+}) => <button {...props}>{children}</button>;
 
-const Learn = ({ scrollToRef }: { scrollToRef: React.RefObject<HTMLDivElement> | React.RefObject<null> }) => {
+const Learn = ({
+  scrollToRef,
+}: {
+  scrollToRef: React.RefObject<HTMLDivElement> | React.RefObject<null>;
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const settings = {
@@ -70,7 +82,7 @@ const Learn = ({ scrollToRef }: { scrollToRef: React.RefObject<HTMLDivElement> |
     responsive: [
       {
         breakpoint: 100000,
-        settings: "unslick",
+        settings: 'unslick',
       } as ResponsiveObject,
       {
         breakpoint: 1179,
@@ -88,11 +100,11 @@ const Learn = ({ scrollToRef }: { scrollToRef: React.RefObject<HTMLDivElement> |
   };
 
   return (
-    <div className={cn("section", styles.section)} ref={scrollToRef}>
-      <div className={cn("container", styles.container)}>
+    <div className={cn('section', styles.section)} ref={scrollToRef}>
+      <div className={cn('container', styles.container)}>
         <div className={styles.head}>
           <div className={styles.wrap}>
-            <h2 className={cn("h2", styles.title)}>Learn crypto</h2>
+            <h2 className={cn('h2', styles.title)}>Learn crypto</h2>
             <div className={styles.nav}>
               {navigation.map((x, index) => (
                 <button
@@ -107,15 +119,12 @@ const Learn = ({ scrollToRef }: { scrollToRef: React.RefObject<HTMLDivElement> |
               ))}
             </div>
           </div>
-          <Link
-            className={cn("button-stroke", styles.button)}
-           href="/theme/learn-crypto"
-          >
+          <Link className={cn('button-stroke', styles.button)} href="/theme/learn-crypto">
             View more
           </Link>
         </div>
         <div className={styles.wrapper}>
-          <Slider className={cn("learn-slider", styles.slider)} {...settings}>
+          <Slider className={cn('learn-slider', styles.slider)} {...settings}>
             {items.map((x, index) =>
               index < 1 ? (
                 <Link className={styles.item} href={x.url} key={index}>
@@ -128,7 +137,7 @@ const Learn = ({ scrollToRef }: { scrollToRef: React.RefObject<HTMLDivElement> |
                       <div className={styles.subtitle}>{x.title}</div>
                       <div className={styles.content}>{x.content}</div>
                     </div>
-                    <button className={cn("button-stroke", styles.button)}>
+                    <button className={cn('button-stroke', styles.button)}>
                       <span>Learn more</span>
                       <Icon name="arrow-right" size={16} />
                     </button>

@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import ChangePassword from "@/screens/ChangePassword";
+import Page from '@/components/Page';
+import ChangePassword from '@/screens/ChangePassword';
 
 export default function ChangePasswordPage() {
   return (
@@ -7,4 +7,4 @@ export default function ChangePasswordPage() {
       <ChangePassword />
     </Page>
   );
-} 
+}
