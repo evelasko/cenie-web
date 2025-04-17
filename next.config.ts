@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: ['./src/styles', './src'],
     quietDeps: true,
+    silenceDeprecations: ['legacy-js-api'],
   },
   images: {
     remotePatterns: [
