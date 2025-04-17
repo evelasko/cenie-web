@@ -1,0 +1,16 @@
+.next/
+node_modules/
+.vercel/
+public/
+build/
+dist/
+coverage/
+.prisma/
+*.lock
+*.log
+.git
+.gitignore
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+README.md 
