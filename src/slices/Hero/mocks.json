@@ -1,0 +1,170 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "sold",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "special",
+				"type": "Text"
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+					"width": 3882,
+					"height": 2584
+				},
+				"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+				"width": 3882,
+				"height": 2584,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "slowly",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Other Title"
+								}
+							],
+							[
+								"overtitle",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "plan",
+									"type": "Text"
+								}
+							],
+							[
+								"undertitle",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "silly",
+									"type": "Text"
+								}
+							],
+							[
+								"image_path",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "images/content/currency/bitcoin.svg"
+								}
+							],
+							[
+								"link",
+								{
+									"key": "c86a8781-6486-4cf8-8b85-14f38d1e48c7",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com",
+										"text": "owner"
+									}
+								}
+							],
+							[
+								"red_tag",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "red tag"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"overtitle",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "overtitle"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "A Simple Title"
+								}
+							],
+							[
+								"undertitle",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Some text for the card"
+								}
+							],
+							[
+								"image_path",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "images/content/currency/chainlink.svg"
+								}
+							],
+							[
+								"green_tag",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "green tag"
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "e2111983-22f3-422c-8775-bcea6151dbe2",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "apple.com",
+										"text": "a link"
+									}
+								}
+							]
+						]
+					}
+				]
+			},
+			"button_link": {
+				"key": "2e078d80-c191-45f5-8589-572f4ad1c97f",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "equally"
+				}
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,131 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "image_path": {
+          "type": "Text",
+          "config": {
+            "label": "Image Path",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": null,
+              "height": null
+            },
+            "thumbnails": []
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "cards": {
+          "type": "Group",
+          "config": {
+            "label": "Cards",
+            "repeat": true,
+            "fields": {
+              "overtitle": {
+                "type": "Text",
+                "config": {
+                  "label": "Overtitle",
+                  "placeholder": ""
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "undertitle": {
+                "type": "Text",
+                "config": {
+                  "label": "Undertitle",
+                  "placeholder": ""
+                }
+              },
+              "image_path": {
+                "type": "Text",
+                "config": {
+                  "label": "Image Path",
+                  "placeholder": ""
+                }
+              },
+              "lucide_icon": {
+                "type": "Text",
+                "config": {
+                  "label": "Lucide Icon",
+                  "placeholder": ""
+                }
+              },
+              "green_tag": {
+                "type": "Text",
+                "config": {
+                  "label": "Green Tag",
+                  "placeholder": ""
+                }
+              },
+              "red_tag": {
+                "type": "Text",
+                "config": {
+                  "label": "Red Tag",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
