@@ -1,10 +1,49 @@
 {
   "format": "custom",
   "id": "navigation",
-  "json": {
-    "Main": {}
-  },
   "label": "Navigation",
   "repeatable": false,
-  "status": true
+  "status": true,
+  "json": {
+    "Primary": {
+      "primary_navigation": {
+        "type": "Group",
+        "config": {
+          "label": "Primary Navigation",
+          "repeat": true,
+          "fields": {
+            "items": {
+              "type": "Link",
+              "config": {
+                "label": "items",
+                "select": "document",
+                "repeat": false,
+                "customtypes": ["primary_navigation_item"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "Footer": {
+      "footer_navigation": {
+        "type": "Group",
+        "config": {
+          "label": "Footer Navigation",
+          "repeat": true,
+          "fields": {
+            "items": {
+              "type": "Link",
+              "config": {
+                "label": "Items",
+                "select": "document",
+                "repeat": false,
+                "customtypes": ["primary_navigation_item"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

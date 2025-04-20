@@ -1,0 +1,94 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nam nisi orci, lacinia sit amet euismod sed, commodo dignissim tellus. Curabitur et egestas ante, sit amet cursus magna. Curabitur auctor molestie enim, sit amet semper ex dictum quis. Maecenas finibus nibh eu eros porta luctus. In semper orci mauris. Cras consequat scelerisque rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce neque magna, vehicula sed mollis et, vehicula et erat. Sed et nulla nulla. Mauris pretium dictum placerat. Nunc mattis, neque sit amet convallis congue, arcu sem luctus ante, non accumsan nisi sapien vel lectus.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Nunc malesuada ipsum vitae ligula tristique.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Quis maximus ante dictum. Mauris eget dui vel sapien auctor suscipit. Fusce nec magna at eros porttitor maximus non sit amet lorem. Curabitur vel diam sit amet tellus vehicula placerat. Cras consectetur hendrerit orci, in cursus mauris scelerisque a. Phasellus enim tortor, interdum et arcu pulvinar, varius imperdiet neque. Donec hendrerit purus urna, sit amet rutrum orci mattis et. Mauris et diam tellus. Sed placerat auctor tortor at finibus. Quisque sed urna sed dolor dignissim luctus et eget nibh.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Mauris faucibus interdum bibendum. Pellentesque in dolor tellus. Integer rhoncus cursus ex. Fusce varius vitae ex quis facilisis. Integer sit amet gravida urna. Morbi egestas, dolor in gravida convallis, tellus diam rhoncus elit, nec facilisis orci ante ac lectus. Vestibulum laoreet, ante ut scelerisque cursus, odio nisl convallis ipsum, rutrum molestie mauris nulla at mi. Cras feugiat velit quis erat consectetur euismod. Ut luctus augue nunc, vel consequat nisl sodales et. Suspendisse ut ex eget quam feugiat varius id ut lacus. Donec congue semper sem, eget porttitor erat elementum non. Morbi a augue a massa commodo dignissim id a dolor. Nunc nec massa varius, imperdiet turpis sed, dapibus urna. Sed mollis elit id ligula malesuada ullamcorper. Cras ultricies in nisi sed viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Cras id tempor magna.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aliquam convallis placerat augue sit amet commodo. Aenean ultricies, leo vitae fermentum tincidunt, nisl massa scelerisque lacus, maximus ultrices nulla libero lobortis nulla. Ut tincidunt, sem lacinia consequat iaculis, velit urna ullamcorper diam, eu fermentum orci sem ac ipsum. Duis accumsan imperdiet purus, sit amet volutpat nunc accumsan tempor. Proin dignissim augue at posuere varius. Donec blandit mattis nibh sed vestibulum. Nam finibus faucibus lectus a auctor. In eu nisl imperdiet, sagittis nunc ut, interdum lorem. Curabitur vitae elit quis orci mattis tristique. Vestibulum ut aliquet lectus. Duis aliquet, nisi non dictum mollis, quam odio lacinia metus, sit amet scelerisque ante dolor ut tellus. Mauris consequat nibh leo, quis posuere tortor semper in. Cras a bibendum mauris. Fusce egestas felis vel risus cursus, commodo auctor sem condimentum.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"show_share_button": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"show_favorite_button": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": []
+	}
+]

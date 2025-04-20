@@ -40,18 +40,20 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             )}
             {slice.primary.image && <PrismicNextImage field={slice.primary.image} />}
           </div>
-          <Cards
-            className={styles.cards}
-            items={slice.primary.cards.map(card => ({
-              title: (card.overtitle ?? '') as string,
-              price: (card.title ?? '') as string,
-              money: (card.undertitle ?? '') as string,
-              image: (card.image_path ?? '') as string,
-              url: (isFilled.link(card.link) ? card.link.url : '') as string,
-              positive: isFilled.keyText(card.green_tag) ? card.green_tag : undefined,
-              negative: isFilled.keyText(card.red_tag) ? card.red_tag : undefined,
-            }))}
-          />
+          {isFilled.group(slice.primary.cards) && (
+            <Cards
+              className={styles.cards}
+              items={slice.primary.cards.map(card => ({
+                title: (card.overtitle ?? '') as string,
+                price: (card.title ?? '') as string,
+                money: (card.undertitle ?? '') as string,
+                image: (card.image_path ?? '') as string,
+                url: (isFilled.link(card.link) ? card.link.url : '') as string,
+                positive: isFilled.keyText(card.green_tag) ? card.green_tag : undefined,
+                negative: isFilled.keyText(card.red_tag) ? card.red_tag : undefined,
+              }))}
+            />
+          )}
         </div>
       </div>
     </section>

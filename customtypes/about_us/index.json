@@ -1,30 +1,14 @@
 {
   "format": "page",
-  "id": "home_page",
-  "label": "Home Page",
-  "repeatable": false,
-  "status": true,
+  "id": "about_us",
   "json": {
     "Main": {
-      "wide_header": {
-        "type": "Boolean",
-        "config": {
-          "label": "Wide Header",
-          "placeholder_false": "false",
-          "placeholder_true": "true",
-          "default_value": false
-        }
-      },
       "slices": {
-        "type": "Slices",
-        "fieldset": "Slice Zone",
         "config": {
-          "choices": {
-            "hero": {
-              "type": "SharedSlice"
-            }
-          }
-        }
+          "choices": {}
+        },
+        "fieldset": "Slice Zone",
+        "type": "Slices"
       }
     },
     "SEO & Metadata": {
@@ -54,5 +38,8 @@
         "type": "Image"
       }
     }
-  }
+  },
+  "label": "About Us",
+  "repeatable": false,
+  "status": true
 }
