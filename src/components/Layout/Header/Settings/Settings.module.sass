@@ -1,4 +1,4 @@
-@import ../../../styles/helpers
+@import ../../../../styles/helpers
 
 .settings
     position: relative
@@ -52,7 +52,7 @@
     left: 50%
     z-index: 2
     transform: translate(-50%, 10px)
-    width: 365px
+    width: fit-content
     padding: 16px
     box-shadow: 0px 16px 48px rgba(31, 47, 70, 0.1)
     border-radius: 12px
@@ -82,18 +82,6 @@
             right: 208px
         +dark
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='9' fill='none' viewBox='0 0 24 9'%3E%3Cpath d='M6.343 2.657L0 9h24l-6.343-6.343a8 8 0 0 0-11.314 0z' fill='%2323262F'/%3E%3C/svg%3E")
-
-.row
-    display: flex
-    margin: 0 -24px
-
-.col
-    flex: 0 0 50%
-    padding: 0 24px
-    &:first-child
-        border-right: 1px solid $n6
-        +dark
-            border-color: $n3
 
 .category
     margin-bottom: 4px
@@ -145,5 +133,14 @@
             +dark
                 background: $n8
 
+.language
+    a, a:link, a:visited
+        display: flex
+        align-items: center
+        width: 100%
+        color: inherit
+        text-decoration: none
+
 .flag
     margin-right: 8px
+    display: inline-block

@@ -1,6 +1,9 @@
 {
   "format": "page",
-  "id": "learn_page",
+  "id": "section_page",
+  "label": "Section Page",
+  "repeatable": true,
+  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -9,12 +12,28 @@
           "label": "UID"
         }
       },
-      "slices": {
+      "section": {
+        "type": "Link",
         "config": {
-          "choices": {}
-        },
+          "label": "Section",
+          "select": "document",
+          "repeat": false,
+          "customtypes": ["section"]
+        }
+      },
+      "slices": {
+        "type": "Slices",
         "fieldset": "Slice Zone",
-        "type": "Slices"
+        "config": {
+          "choices": {
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "text_body": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {
@@ -44,8 +63,5 @@
         "type": "Image"
       }
     }
-  },
-  "label": "Learn Page",
-  "repeatable": true,
-  "status": true
+  }
 }

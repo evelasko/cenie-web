@@ -7,8 +7,11 @@ import { createClient } from '@/prismicio';
 import { components } from '@/slices';
 import Layout from '@/components/Page';
 
-export default async function Page({ params: { lang } }: { params: { lang: string } }) {
+type Params = { lang: string };
+
+export default async function Page({ params }: { params: Promise<Params> }) {
   const client = createClient();
+  const { lang } = await params;
   const page = await client.getSingle('home_page', { lang }).catch(() => notFound());
 
   return (
@@ -18,11 +21,8 @@ export default async function Page({ params: { lang } }: { params: { lang: strin
   );
 }
 
-export async function generateMetadata({
-  params: { lang },
-}: {
-  params: { lang: string };
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { lang } = await params;
   const client = createClient();
   const page = await client.getSingle('home_page', { lang }).catch(() => notFound());
 

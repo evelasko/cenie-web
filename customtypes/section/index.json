@@ -1,6 +1,9 @@
 {
   "format": "page",
-  "id": "legal_page",
+  "id": "section",
+  "label": "Section",
+  "repeatable": true,
+  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -10,11 +13,18 @@
         }
       },
       "slices": {
-        "config": {
-          "choices": {}
-        },
+        "type": "Slices",
         "fieldset": "Slice Zone",
-        "type": "Slices"
+        "config": {
+          "choices": {
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "text_body": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {
@@ -44,8 +54,5 @@
         "type": "Image"
       }
     }
-  },
-  "label": "Legal Page",
-  "repeatable": true,
-  "status": true
+  }
 }

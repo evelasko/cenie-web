@@ -4,487 +4,6 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type AboutPageDocumentDataSlicesSlice = never;
-
-/**
- * Content for About Page documents
- */
-interface AboutPageDocumentData {
-  /**
-   * Slice Zone field in *About Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<AboutPageDocumentDataSlicesSlice> /**
-   * Meta Title field in *About Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: about_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *About Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: about_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *About Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * About Page document from Prismic
- *
- * - **API ID**: `about_page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type AboutPageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-  Simplify<AboutPageDocumentData>,
-  'about_page',
-  Lang
->;
-
-type AboutUsDocumentDataSlicesSlice = never;
-
-/**
- * Content for About Us documents
- */
-interface AboutUsDocumentData {
-  /**
-   * Slice Zone field in *About Us*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<AboutUsDocumentDataSlicesSlice> /**
-   * Meta Title field in *About Us*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: about_us.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *About Us*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: about_us.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *About Us*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * About Us document from Prismic
- *
- * - **API ID**: `about_us`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type AboutUsDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
-  Simplify<AboutUsDocumentData>,
-  'about_us',
-  Lang
->;
-
-type ArticleDocumentDataSlicesSlice = never;
-
-/**
- * Content for Article documents
- */
-interface ArticleDocumentData {
-  /**
-   * Title field in *Article*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Body field in *Article*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.body
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  body: prismic.RichTextField;
-
-  /**
-   * Video field in *Article*
-   *
-   * - **Field Type**: Embed
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.video
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#embed
-   */
-  video: prismic.EmbedField;
-
-  /**
-   * Slice Zone field in *Article*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<ArticleDocumentDataSlicesSlice> /**
-   * Meta Title field in *Article*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: article.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Article*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: article.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Article*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * Article document from Prismic
- *
- * - **API ID**: `article`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type ArticleDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-  Simplify<ArticleDocumentData>,
-  'article',
-  Lang
->;
-
-type BasePageDocumentDataSlicesSlice = never;
-
-/**
- * Content for Base Page documents
- */
-interface BasePageDocumentData {
-  /**
-   * Slice Zone field in *Base Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: base_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<BasePageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Base Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: base_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Base Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: base_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Base Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: base_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * Base Page document from Prismic
- *
- * - **API ID**: `base_page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type BasePageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-  Simplify<BasePageDocumentData>,
-  'base_page',
-  Lang
->;
-
-type ConnectPageDocumentDataSlicesSlice = never;
-
-/**
- * Content for Connect Page documents
- */
-interface ConnectPageDocumentData {
-  /**
-   * Slice Zone field in *Connect Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: connect_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<ConnectPageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Connect Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: connect_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Connect Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: connect_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Connect Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: connect_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * Connect Page document from Prismic
- *
- * - **API ID**: `connect_page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type ConnectPageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-  Simplify<ConnectPageDocumentData>,
-  'connect_page',
-  Lang
->;
-
-type CreatePageDocumentDataSlicesSlice = never;
-
-/**
- * Content for Create Page documents
- */
-interface CreatePageDocumentData {
-  /**
-   * Slice Zone field in *Create Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: create_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<CreatePageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Create Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: create_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Create Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: create_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Create Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: create_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * Create Page document from Prismic
- *
- * - **API ID**: `create_page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type CreatePageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-  Simplify<CreatePageDocumentData>,
-  'create_page',
-  Lang
->;
-
-type DivisionPageDocumentDataSlicesSlice = never;
-
-/**
- * Content for Division Page documents
- */
-interface DivisionPageDocumentData {
-  /**
-   * Slice Zone field in *Division Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: division_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<DivisionPageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Division Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: division_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Division Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: division_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Division Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: division_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * Division Page document from Prismic
- *
- * - **API ID**: `division_page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type DivisionPageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-  Simplify<DivisionPageDocumentData>,
-  'division_page',
-  Lang
->;
-
 type HomePageDocumentDataSlicesSlice = HeroSlice;
 
 /**
@@ -561,198 +80,6 @@ export type HomePageDocument<Lang extends string = string> = prismic.PrismicDocu
   Lang
 >;
 
-type LandingPageDocumentDataSlicesSlice = never;
-
-/**
- * Content for Landing Page documents
- */
-interface LandingPageDocumentData {
-  /**
-   * Slice Zone field in *Landing Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: landing_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<LandingPageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Landing Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: landing_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Landing Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: landing_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Landing Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: landing_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * Landing Page document from Prismic
- *
- * - **API ID**: `landing_page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type LandingPageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-  Simplify<LandingPageDocumentData>,
-  'landing_page',
-  Lang
->;
-
-type LearnPageDocumentDataSlicesSlice = never;
-
-/**
- * Content for Learn Page documents
- */
-interface LearnPageDocumentData {
-  /**
-   * Slice Zone field in *Learn Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: learn_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<LearnPageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Learn Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: learn_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Learn Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: learn_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Learn Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: learn_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * Learn Page document from Prismic
- *
- * - **API ID**: `learn_page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type LearnPageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-  Simplify<LearnPageDocumentData>,
-  'learn_page',
-  Lang
->;
-
-type LegalPageDocumentDataSlicesSlice = never;
-
-/**
- * Content for Legal Page documents
- */
-interface LegalPageDocumentData {
-  /**
-   * Slice Zone field in *Legal Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: legal_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<LegalPageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Legal Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: legal_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Legal Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: legal_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Legal Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: legal_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * Legal Page document from Prismic
- *
- * - **API ID**: `legal_page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type LegalPageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-  Simplify<LegalPageDocumentData>,
-  'legal_page',
-  Lang
->;
-
 /**
  * Item in *Navigation → Primary Navigation*
  */
@@ -823,6 +150,70 @@ export type NavigationDocument<Lang extends string = string> = prismic.PrismicDo
   Lang
 >;
 
+type PageDocumentDataSlicesSlice = HeroSlice | TextBodySlice;
+
+/**
+ * Content for Page documents
+ */
+interface PageDocumentData {
+  /**
+   * Slice Zone field in *Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
+   * Meta Title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Page document from Prismic
+ *
+ * - **API ID**: `page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+  Simplify<PageDocumentData>,
+  'page',
+  Lang
+>;
+
 /**
  * Item in *Navigation Item → Menu*
  */
@@ -851,7 +242,7 @@ interface PrimaryNavigationItemDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  target: prismic.ContentRelationshipField<'home_page' | 'base_page' | 'article'>;
+  target: prismic.ContentRelationshipField<'home_page' | 'section' | 'section_page'>;
 
   /**
    * Custom Label field in *Navigation Item*
@@ -903,49 +294,49 @@ export type PrimaryNavigationItemDocument<Lang extends string = string> =
     Lang
   >;
 
-type ResearchPageDocumentDataSlicesSlice = never;
+type SectionDocumentDataSlicesSlice = HeroSlice | TextBodySlice;
 
 /**
- * Content for Research Page documents
+ * Content for Section documents
  */
-interface ResearchPageDocumentData {
+interface SectionDocumentData {
   /**
-   * Slice Zone field in *Research Page*
+   * Slice Zone field in *Section*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: research_page.slices[]
+   * - **API ID Path**: section.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<ResearchPageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Research Page*
+  slices: prismic.SliceZone<SectionDocumentDataSlicesSlice> /**
+   * Meta Title field in *Section*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: research_page.meta_title
+   * - **API ID Path**: section.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */;
   meta_title: prismic.KeyTextField;
 
   /**
-   * Meta Description field in *Research Page*
+   * Meta Description field in *Section*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: research_page.meta_description
+   * - **API ID Path**: section.meta_description
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *Research Page*
+   * Meta Image field in *Section*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: research_page.meta_image
+   * - **API ID Path**: section.meta_image
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#image
    */
@@ -953,17 +344,92 @@ interface ResearchPageDocumentData {
 }
 
 /**
- * Research Page document from Prismic
+ * Section document from Prismic
  *
- * - **API ID**: `research_page`
+ * - **API ID**: `section`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type ResearchPageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-  Simplify<ResearchPageDocumentData>,
-  'research_page',
+export type SectionDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+  Simplify<SectionDocumentData>,
+  'section',
+  Lang
+>;
+
+type SectionPageDocumentDataSlicesSlice = HeroSlice | TextBodySlice;
+
+/**
+ * Content for Section Page documents
+ */
+interface SectionPageDocumentData {
+  /**
+   * Section field in *Section Page*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_page.section
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  section: prismic.ContentRelationshipField<'section'>;
+
+  /**
+   * Slice Zone field in *Section Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<SectionPageDocumentDataSlicesSlice> /**
+   * Meta Title field in *Section Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: section_page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Section Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: section_page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Section Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Section Page document from Prismic
+ *
+ * - **API ID**: `section_page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SectionPageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+  Simplify<SectionPageDocumentData>,
+  'section_page',
   Lang
 >;
 
@@ -985,20 +451,12 @@ export type SettingsDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 export type AllDocumentTypes =
-  | AboutPageDocument
-  | AboutUsDocument
-  | ArticleDocument
-  | BasePageDocument
-  | ConnectPageDocument
-  | CreatePageDocument
-  | DivisionPageDocument
   | HomePageDocument
-  | LandingPageDocument
-  | LearnPageDocument
-  | LegalPageDocument
   | NavigationDocument
+  | PageDocument
   | PrimaryNavigationItemDocument
-  | ResearchPageDocument
+  | SectionDocument
+  | SectionPageDocument
   | SettingsDocument;
 
 /**
@@ -1263,49 +721,25 @@ declare module '@prismicio/client' {
 
   namespace Content {
     export type {
-      AboutPageDocument,
-      AboutPageDocumentData,
-      AboutPageDocumentDataSlicesSlice,
-      AboutUsDocument,
-      AboutUsDocumentData,
-      AboutUsDocumentDataSlicesSlice,
-      ArticleDocument,
-      ArticleDocumentData,
-      ArticleDocumentDataSlicesSlice,
-      BasePageDocument,
-      BasePageDocumentData,
-      BasePageDocumentDataSlicesSlice,
-      ConnectPageDocument,
-      ConnectPageDocumentData,
-      ConnectPageDocumentDataSlicesSlice,
-      CreatePageDocument,
-      CreatePageDocumentData,
-      CreatePageDocumentDataSlicesSlice,
-      DivisionPageDocument,
-      DivisionPageDocumentData,
-      DivisionPageDocumentDataSlicesSlice,
       HomePageDocument,
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
-      LandingPageDocument,
-      LandingPageDocumentData,
-      LandingPageDocumentDataSlicesSlice,
-      LearnPageDocument,
-      LearnPageDocumentData,
-      LearnPageDocumentDataSlicesSlice,
-      LegalPageDocument,
-      LegalPageDocumentData,
-      LegalPageDocumentDataSlicesSlice,
       NavigationDocument,
       NavigationDocumentData,
       NavigationDocumentDataPrimaryNavigationItem,
       NavigationDocumentDataFooterNavigationItem,
+      PageDocument,
+      PageDocumentData,
+      PageDocumentDataSlicesSlice,
       PrimaryNavigationItemDocument,
       PrimaryNavigationItemDocumentData,
       PrimaryNavigationItemDocumentDataMenuItem,
-      ResearchPageDocument,
-      ResearchPageDocumentData,
-      ResearchPageDocumentDataSlicesSlice,
+      SectionDocument,
+      SectionDocumentData,
+      SectionDocumentDataSlicesSlice,
+      SectionPageDocument,
+      SectionPageDocumentData,
+      SectionPageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,

@@ -41,7 +41,15 @@ const navigation = [
   },
 ];
 
-const Header = ({ headerWide }: { headerWide: boolean }) => {
+const Header = ({
+  headerWide,
+  lang,
+  localizedUrls,
+}: {
+  headerWide: boolean;
+  lang?: string;
+  localizedUrls?: Record<string, string>;
+}) => {
   const [visibleNav, setVisibleNav] = useState(false);
   const pathname = usePathname();
 
@@ -117,7 +125,9 @@ const Header = ({ headerWide }: { headerWide: boolean }) => {
                             </Link>
                         </div> */}
           </div>
-          <Settings className={styles.settings} />
+          {lang && localizedUrls && (
+            <Settings className={styles.settings} lang={lang} localizedUrls={localizedUrls} />
+          )}
           <div className={styles.control}>
             <Link
               className={cn(styles.activity, {

@@ -18,7 +18,7 @@
           "label": "Target",
           "select": "document",
           "repeat": false,
-          "customtypes": ["home_page", "base_page", "article"]
+          "customtypes": ["home_page", "section", "section_page"]
         }
       },
       "custom_label": {

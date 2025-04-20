@@ -36,7 +36,12 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           </div>
           <div className={styles.bg}>
             {slice.primary.image_path && (
-              <Image src={slice.primary.image_path as string} alt={'Hero Image'} />
+              <Image
+                src={slice.primary.image_path as string}
+                width={913}
+                height={924}
+                alt={'Hero Image'}
+              />
             )}
             {slice.primary.image && <PrismicNextImage field={slice.primary.image} />}
           </div>

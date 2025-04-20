@@ -4,25 +4,18 @@ import cn from 'classnames';
 import styles from './Settings.module.sass';
 import OutsideClickHandler from 'react-outside-click-handler';
 import Icon from '@/components/Icon';
+import { locales } from '@/constants/locales';
+import Link from 'next/link';
 
-const language = [
-  {
-    title: 'English',
-    flag: '🇺🇸',
-  },
-  {
-    title: 'Vietnamese',
-    flag: '🇻🇳',
-  },
-  {
-    title: 'Russia',
-    flag: '🇷🇺',
-  },
-];
-
-const currency = ['USD', 'RUB', 'EUR', 'JPY', 'BTC'];
-
-const Settings = ({ className }: { className: string }) => {
+const Settings = ({
+  className,
+  lang,
+  localizedUrls,
+}: {
+  className: string;
+  lang: string;
+  localizedUrls: Record<string, string>;
+}) => {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -33,38 +26,25 @@ const Settings = ({ className }: { className: string }) => {
         })}
       >
         <button className={styles.head} onClick={() => setVisible(!visible)}>
-          EN/USD
+          {locales[(lang ?? 'en-es') as keyof typeof locales].flag}
           <Icon name="arrow-down" size={16} />
         </button>
         <div className={styles.body}>
           <div className={styles.row}>
             <div className={styles.col}>
-              <div className={styles.category}>Language</div>
+              {/* <div className={styles.category}>Language</div> */}
               <div className={styles.menu}>
-                {language.map((x, index) => (
+                {Object.entries(locales).map(([key, value]) => (
                   <div
                     className={cn(styles.language, {
-                      [styles.active]: index === 0,
+                      [styles.active]: key === lang,
                     })}
-                    key={index}
+                    key={key}
                   >
-                    <span className={styles.flag}>{x.flag}</span>
-                    {x.title}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className={styles.col}>
-              <div className={styles.category}>Currency</div>
-              <div className={styles.menu}>
-                {currency.map((x, index) => (
-                  <div
-                    className={cn(styles.currency, {
-                      [styles.active]: index === 0,
-                    })}
-                    key={index}
-                  >
-                    {x}
+                    <Link href={localizedUrls[key]}>
+                      <span className={styles.flag}>{value.flag}</span>
+                      {value.name}
+                    </Link>
                   </div>
                 ))}
               </div>
