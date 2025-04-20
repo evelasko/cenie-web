@@ -1,3 +1,5 @@
+@use "sass:math"
+
 @import ../../../styles/helpers
 
 .container
@@ -10,25 +12,25 @@
         letter-spacing: -.02em
         +m
             font-size: 48px
-            line-height: (56/48)
+            line-height: math.div(56, 48)
     h2
         font-size: 48px
-        line-height: (56/48)
+        line-height: math.div(56, 48)
         letter-spacing: -.02em
         +m
             font-size: 40px
-            line-height: (48/40)
+            line-height: (48*0.025)
             letter-spacing: -.01em
     h3
         font-size: 40px
-        line-height: (48/40)
+        line-height: (48*0.025)
         letter-spacing: -.01em
         +m
             font-size: 32px
-            line-height: (40/32)
+            line-height: math.div(40, 32)
     h4
         font-size: 32px
-        line-height: (40/32)
+        line-height: math.div(40, 32)
         letter-spacing: -.01em
     h1,
     h2,

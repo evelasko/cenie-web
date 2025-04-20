@@ -1,3 +1,5 @@
+@use "sass:math"
+
 @import ../../styles/helpers
 
 .checkbox
@@ -49,7 +51,7 @@
         transition: opacity .2s
 
 .text
-    line-height: (24/14)
+    line-height: math.div(24, 14)
     font-weight: 500
     color: $n2 
     +dark

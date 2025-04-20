@@ -1,4 +1,6 @@
 // media queries
+@use "sass:math"
+
 =w
     @media only screen and (max-width: "1419px")
         @content
@@ -49,45 +51,45 @@ $n8: #FCFCFD
 // typography
 =body-1
     font-size: 24px
-    line-height: (32/24)
+    line-height: math.div(32, 24)
     letter-spacing: -.01em
 
 =body-bold-1
     font-size: 24px
-    line-height: (32/24)
+    line-height: math.div(32, 24)
     font-weight: 600
     letter-spacing: -.01em
 
 =body-2
     font-size: 16px
-    line-height: (24/16)
+    line-height: math.div(24, 16)
 
 =body-bold-2
     font-size: 16px
-    line-height: (24/16)
+    line-height: math.div(24, 16)
     font-weight: 500
 
 =caption-1
     font-size: 14px
-    line-height: (24/14)
+    line-height: math.div(24, 14)
 
 =caption-bold-1
     font-size: 14px
-    line-height: (24/14)
+    line-height: math.div(24, 14)
     font-weight: 500
 
 =caption-2
     font-size: 12px
-    line-height: (20/12)
+    line-height: math.div(20, 12)
 
 =caption-bold-2
     font-size: 12px
-    line-height: (20/12)
+    line-height: math.div(20, 12)
     font-weight: 600
 
 =caption-3
     font-size: 10px
-    line-height: (16/10)
+    line-height: (16*0.1)
 
 =hairline-1
     font-size: 16px
@@ -110,7 +112,7 @@ $n8: #FCFCFD
 =button-2
     +plus-jakarta-sans
     font-size: 14px
-    line-height: (16/14)
+    line-height: math.div(16, 14)
     font-weight: 700
     
 //triangle
@@ -119,16 +121,16 @@ $n8: #FCFCFD
     height: 0px
     border-style: solid
     @if $direction == t
-        border-width: 0 $width / 2 + px $height + px $width / 2 + px
+        border-width: 0 $width * 0.5 + px $height + px $width * 0.5 + px
         border-color: transparent transparent $bg transparent
     @if $direction == r
-        border-width: $height / 2 + px 0 $height / 2 + px $width + px
+        border-width: $height * 0.5 + px 0 $height * 0.5 + px $width + px
         border-color: transparent transparent transparent $bg
     @if $direction == b
-        border-width: $height + px $width / 2 + px 0 $width / 2 + px
+        border-width: $height + px $width * 0.5 + px 0 $width * 0.5 + px
         border-color: $bg transparent transparent transparent
     @if $direction == l
-        border-width: $height / 2 + px $width + px $height / 2 + px 0
+        border-width: $height * 0.5 + px $width + px $height * 0.5 + px 0
         border-color: transparent $bg transparent transparent
     @if $direction == tl
         border-width: $height + px $width + px 0 0

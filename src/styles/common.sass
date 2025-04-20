@@ -1,10 +1,12 @@
 // common styles
+@use "sass:math"
+
 body
     min-width: 375px
     background: $n8
     +plus-jakarta-sans
     font-size: 14px
-    line-height: (24/14)
+    line-height: math.div(24, 14)
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     color: $n2
