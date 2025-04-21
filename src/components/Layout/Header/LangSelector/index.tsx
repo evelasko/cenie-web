@@ -1,13 +1,13 @@
 'use client';
 import { useState } from 'react';
 import cn from 'classnames';
-import styles from './Settings.module.sass';
+import styles from './LangSelector.module.sass';
 import OutsideClickHandler from 'react-outside-click-handler';
 import Icon from '@/components/Icon';
 import { locales } from '@/constants/locales';
 import Link from 'next/link';
 
-const Settings = ({
+export default function LangSelector({
   className,
   lang,
   localizedUrls,
@@ -15,7 +15,7 @@ const Settings = ({
   className: string;
   lang: string;
   localizedUrls: Record<string, string>;
-}) => {
+}) {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -54,6 +54,4 @@ const Settings = ({
       </div>
     </OutsideClickHandler>
   );
-};
-
-export default Settings;
+}

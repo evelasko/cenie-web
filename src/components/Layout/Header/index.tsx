@@ -5,11 +5,8 @@ import styles from './Header.module.sass';
 import { usePathname } from 'next/navigation';
 import Image from '@/components/Image';
 import Dropdown from './Dropdown';
-import Settings from './Settings';
-import Icon from '@/components/Icon';
-import Notifications from './Notifications';
+import LangSelector from './LangSelector';
 import Theme from '@/components/Theme';
-import User from './User';
 import Link from 'next/link';
 
 export type NavigationEntry = {
@@ -17,36 +14,6 @@ export type NavigationEntry = {
   url: string;
   items?: NavigationEntry[];
 };
-
-// const navigation = [
-//   {
-//     title: 'Exchange',
-//     url: '/theme/exchange',
-//   },
-//   {
-//     title: 'Buy Crypto',
-//     dropdown: [
-//       {
-//         title: 'Credit card',
-//         icon: 'user',
-//         url: '/theme/buy-crypto',
-//       },
-//       {
-//         title: 'Bank deposit',
-//         icon: 'image',
-//         url: '/theme/deposit-fiat',
-//       },
-//     ],
-//   },
-//   {
-//     title: 'Market',
-//     url: '/theme/market',
-//   },
-//   {
-//     title: 'Discover',
-//     url: '/theme/learn-crypto',
-//   },
-// ];
 
 const Header = ({
   headerWide,
@@ -103,76 +70,13 @@ const Header = ({
                 )
               )}
             </nav>
-            {/* <Link
-              className={cn('button-stroke', styles.button, {
-                [styles.active]: pathname === '/wallet-overview',
-              })}
-              href="/theme/wallet-overview"
-              onClick={() => setVisibleNav(false)}
-            >
-              Wallet
-            </Link> */}
-            {/* <div className={styles.btns}>
-                            <Link
-                                className={cn("button-small", styles.button)}
-                               href="/sign-up"
-                            >
-                                Sign Up
-                            </Link>
-                            <Link
-                                className={cn(
-                                    "button-stroke button-small",
-                                    styles.button
-                                )}
-                               href="/sign-in"
-                            >
-                                Login
-                            </Link>
-                        </div> */}
           </div>
           {lang && localizedUrls && (
-            <Settings className={styles.settings} lang={lang} localizedUrls={localizedUrls} />
+            <LangSelector className={styles.settings} lang={lang} localizedUrls={localizedUrls} />
           )}
           <div className={styles.control}>
-            {/* <Link
-              className={cn(styles.activity, {
-                [styles.active]: pathname === '/theme/activity',
-              })}
-              href="/theme/activity"
-            >
-              <Icon name="lightning" size={24} />
-            </Link> */}
-            {/* <Notifications className={styles.notifications} /> */}
-            {/* <Link
-              className={cn('button-stroke button-small', styles.button, {
-                [styles.active]: pathname === '/wallet-overview',
-              })}
-              href="/theme/wallet-overview"
-            >
-              Wallet
-            </Link> */}
             <Theme className={styles.theme} icon />
-            {/* <User className={styles.user} /> */}
           </div>
-          {/* <div className={styles.btns}>
-                        <Link
-                            className={cn("button-small", styles.button)}
-                           href="/sign-up"
-                            onClick={() => setVisibleNav(false)}
-                        >
-                            Sign Up
-                        </Link>
-                        <Link
-                            className={cn(
-                                "button-stroke button-small",
-                                styles.button
-                            )}
-                           href="/sign-in"
-                            onClick={() => setVisibleNav(false)}
-                        >
-                            Login
-                        </Link>
-                    </div> */}
           <button
             className={cn(styles.burger, {
               [styles.active]: visibleNav,
