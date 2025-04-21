@@ -72,11 +72,7 @@ const Header = ({
             srcDark="/images/logo-dark.svg"
             alt="BitCloud"
           />
-          {/* <img
-                        className={styles.picMobile}
-                        src="/images/logo.svg"
-                        alt="BitCloud"
-                    /> */}
+          <img className={styles.picMobile} src="/images/logo.svg" alt="BitCloud" />
         </Link>
         <div className={styles.wrapper}>
           <div
@@ -107,7 +103,7 @@ const Header = ({
                 )
               )}
             </nav>
-            <Link
+            {/* <Link
               className={cn('button-stroke', styles.button, {
                 [styles.active]: pathname === '/wallet-overview',
               })}
@@ -115,7 +111,7 @@ const Header = ({
               onClick={() => setVisibleNav(false)}
             >
               Wallet
-            </Link>
+            </Link> */}
             {/* <div className={styles.btns}>
                             <Link
                                 className={cn("button-small", styles.button)}
@@ -138,25 +134,25 @@ const Header = ({
             <Settings className={styles.settings} lang={lang} localizedUrls={localizedUrls} />
           )}
           <div className={styles.control}>
-            <Link
+            {/* <Link
               className={cn(styles.activity, {
                 [styles.active]: pathname === '/theme/activity',
               })}
               href="/theme/activity"
             >
               <Icon name="lightning" size={24} />
-            </Link>
-            <Notifications className={styles.notifications} />
-            <Link
+            </Link> */}
+            {/* <Notifications className={styles.notifications} /> */}
+            {/* <Link
               className={cn('button-stroke button-small', styles.button, {
                 [styles.active]: pathname === '/wallet-overview',
               })}
               href="/theme/wallet-overview"
             >
               Wallet
-            </Link>
+            </Link> */}
             <Theme className={styles.theme} icon />
-            <User className={styles.user} />
+            {/* <User className={styles.user} /> */}
           </div>
           {/* <div className={styles.btns}>
                         <Link

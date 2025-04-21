@@ -41,7 +41,7 @@ const Settings = ({
                     })}
                     key={key}
                   >
-                    <Link href={localizedUrls[key]}>
+                    <Link href={localizedUrls[key] ?? '#'}>
                       <span className={styles.flag}>{value.flag}</span>
                       {value.name}
                     </Link>
