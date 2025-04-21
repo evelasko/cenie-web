@@ -11,44 +11,53 @@ import Notifications from './Notifications';
 import Theme from '@/components/Theme';
 import User from './User';
 import Link from 'next/link';
-const navigation = [
-  {
-    title: 'Exchange',
-    url: '/theme/exchange',
-  },
-  {
-    title: 'Buy Crypto',
-    dropdown: [
-      {
-        title: 'Credit card',
-        icon: 'user',
-        url: '/theme/buy-crypto',
-      },
-      {
-        title: 'Bank deposit',
-        icon: 'image',
-        url: '/theme/deposit-fiat',
-      },
-    ],
-  },
-  {
-    title: 'Market',
-    url: '/theme/market',
-  },
-  {
-    title: 'Discover',
-    url: '/theme/learn-crypto',
-  },
-];
+
+export type NavigationEntry = {
+  label: string;
+  url: string;
+  items?: NavigationEntry[];
+};
+
+// const navigation = [
+//   {
+//     title: 'Exchange',
+//     url: '/theme/exchange',
+//   },
+//   {
+//     title: 'Buy Crypto',
+//     dropdown: [
+//       {
+//         title: 'Credit card',
+//         icon: 'user',
+//         url: '/theme/buy-crypto',
+//       },
+//       {
+//         title: 'Bank deposit',
+//         icon: 'image',
+//         url: '/theme/deposit-fiat',
+//       },
+//     ],
+//   },
+//   {
+//     title: 'Market',
+//     url: '/theme/market',
+//   },
+//   {
+//     title: 'Discover',
+//     url: '/theme/learn-crypto',
+//   },
+// ];
 
 const Header = ({
   headerWide,
   lang,
   localizedUrls,
+  navigation,
 }: {
   headerWide: boolean;
   lang?: string;
   localizedUrls?: Record<string, string>;
+  navigation: NavigationEntry[];
 }) => {
   const [visibleNav, setVisibleNav] = useState(false);
   const pathname = usePathname();
@@ -76,8 +85,8 @@ const Header = ({
             })}
           >
             <nav className={styles.nav}>
-              {navigation.map((x, index) =>
-                x.dropdown ? (
+              {(navigation ?? []).map((x, index) =>
+                x.items && x.items.length > 0 ? (
                   <Dropdown
                     className={styles.dropdown}
                     key={index}
@@ -93,7 +102,7 @@ const Header = ({
                     href={x.url}
                     key={index}
                   >
-                    {x.title}
+                    {x.label}
                   </Link>
                 )
               )}

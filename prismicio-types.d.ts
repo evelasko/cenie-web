@@ -215,18 +215,18 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 >;
 
 /**
- * Item in *Navigation Item → Menu*
+ * Item in *Navigation Item → Child Items*
  */
-export interface PrimaryNavigationItemDocumentDataMenuItem {
+export interface PrimaryNavigationItemDocumentDataChildItemsItem {
   /**
-   * Menu Item field in *Navigation Item → Menu*
+   * Child Link field in *Navigation Item → Child Items*
    *
-   * - **Field Type**: Content Relationship
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: primary_navigation_item.menu[].menu_item
+   * - **API ID Path**: primary_navigation_item.child_items[].child_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  menu_item: prismic.ContentRelationshipField<'primary_navigation_item'>;
+  child_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -234,48 +234,26 @@ export interface PrimaryNavigationItemDocumentDataMenuItem {
  */
 interface PrimaryNavigationItemDocumentData {
   /**
-   * Target field in *Navigation Item*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: primary_navigation_item.target
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  target: prismic.ContentRelationshipField<'home_page' | 'section' | 'section_page'>;
-
-  /**
-   * Custom Label field in *Navigation Item*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: primary_navigation_item.custom_label
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  custom_label: prismic.KeyTextField;
-
-  /**
-   * Custom Link field in *Navigation Item*
+   * Target Link field in *Navigation Item*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: primary_navigation_item.custom_link
+   * - **API ID Path**: primary_navigation_item.target_link
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  custom_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+  target_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 
   /**
-   * Menu field in *Navigation Item*
+   * Child Items field in *Navigation Item*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: primary_navigation_item.menu[]
+   * - **API ID Path**: primary_navigation_item.child_items[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  menu: prismic.GroupField<Simplify<PrimaryNavigationItemDocumentDataMenuItem>>;
+  child_items: prismic.GroupField<Simplify<PrimaryNavigationItemDocumentDataChildItemsItem>>;
 }
 
 /**
@@ -733,7 +711,7 @@ declare module '@prismicio/client' {
       PageDocumentDataSlicesSlice,
       PrimaryNavigationItemDocument,
       PrimaryNavigationItemDocumentData,
-      PrimaryNavigationItemDocumentDataMenuItem,
+      PrimaryNavigationItemDocumentDataChildItemsItem,
       SectionDocument,
       SectionDocumentData,
       SectionDocumentDataSlicesSlice,

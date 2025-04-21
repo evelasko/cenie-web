@@ -12,26 +12,10 @@
           "label": "UID"
         }
       },
-      "target": {
+      "target_link": {
         "type": "Link",
         "config": {
-          "label": "Target",
-          "select": "document",
-          "repeat": false,
-          "customtypes": ["home_page", "section", "section_page"]
-        }
-      },
-      "custom_label": {
-        "type": "Text",
-        "config": {
-          "label": "Custom Label",
-          "placeholder": ""
-        }
-      },
-      "custom_link": {
-        "type": "Link",
-        "config": {
-          "label": "Custom Link",
+          "label": "Target Link",
           "placeholder": "",
           "select": null,
           "allowTargetBlank": true,
@@ -39,19 +23,21 @@
           "repeat": false
         }
       },
-      "menu": {
+      "child_items": {
         "type": "Group",
         "config": {
-          "label": "Menu",
+          "label": "Child Items",
           "repeat": true,
           "fields": {
-            "menu_item": {
+            "child_link": {
               "type": "Link",
               "config": {
-                "label": "Menu Item",
-                "select": "document",
-                "repeat": false,
-                "customtypes": ["primary_navigation_item"]
+                "label": "Child Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
               }
             }
           }

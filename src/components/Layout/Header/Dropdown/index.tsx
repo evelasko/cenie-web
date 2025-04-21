@@ -32,11 +32,11 @@ const Dropdown = ({
         })}
       >
         <button className={styles.head} onClick={() => setVisible(!visible)}>
-          {item.title}
+          {item.label}
           <Icon name="arrow-down" size={16} />
         </button>
         <div className={styles.body}>
-          {item.dropdown.map((x: any, index: number) => (
+          {item.items.map((x: any, index: number) => (
             <Link
               className={cn(styles.link, {
                 [styles.active]: pathname === x.url,
@@ -45,8 +45,8 @@ const Dropdown = ({
               key={index}
               onClick={() => handleClick()}
             >
-              <Icon name={x.icon} size={20} />
-              {x.title}
+              {/* <Icon name={x.icon} size={20} /> */}
+              {x.label}
             </Link>
           ))}
         </div>
