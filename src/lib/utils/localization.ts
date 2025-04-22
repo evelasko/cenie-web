@@ -21,6 +21,8 @@ export async function getLocales(
   return [doc, ...altDocs].map(page => {
     const lang = repository?.languages.find(l => l.id === page.lang);
 
+    // The URL will already include the language prefix if it's not the master locale
+    // thanks to our route resolver configuration with `:lang?`
     return {
       lang: lang?.id || '',
       url: page?.url || '',

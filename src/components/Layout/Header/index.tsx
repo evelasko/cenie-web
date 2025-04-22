@@ -8,16 +8,19 @@ import Dropdown from './Dropdown';
 import LangSelector from './LangSelector';
 import Theme from '@/components/Theme';
 import Link from 'next/link';
+import { locales } from '@/constants/locales';
 
 export type NavigationEntry = {
   label: string;
   url: string;
+  icon?: string;
+  text?: string;
   items?: NavigationEntry[];
 };
 
 const Header = ({
   headerWide,
-  lang,
+  lang = 'es-es',
   localizedUrls,
   navigation,
 }: {
@@ -28,6 +31,10 @@ const Header = ({
 }) => {
   const [visibleNav, setVisibleNav] = useState(false);
   const pathname = usePathname();
+
+  const hasTranslations =
+    !!localizedUrls &&
+    Object.keys(localizedUrls).some(locale => locale !== lang && !!localizedUrls[locale]);
 
   return (
     <header className={cn(styles.header, { [styles.wide]: headerWide })}>
@@ -71,7 +78,7 @@ const Header = ({
               )}
             </nav>
           </div>
-          {lang && localizedUrls && (
+          {hasTranslations && (
             <LangSelector className={styles.settings} lang={lang} localizedUrls={localizedUrls} />
           )}
           <div className={styles.control}>

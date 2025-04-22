@@ -13,14 +13,20 @@ export const repositoryName = process.env.NEXT_PUBLIC_PRISMIC_ENVIRONMENT || sm.
  * {@link https://prismic.io/docs/route-resolver#route-resolver}
  */
 const routes: Route[] = [
-  { type: 'home_page', path: '/:lang' },
-  { type: 'section', path: '/:lang/:uid' },
+  {
+    type: 'home_page',
+    path: '/',
+  },
+  {
+    type: 'section',
+    path: '/:uid',
+  },
   {
     type: 'section_page',
     resolvers: {
       section: 'section',
     },
-    path: '/:lang/:section/:uid',
+    path: '/:section/:uid',
   },
 ];
 

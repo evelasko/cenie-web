@@ -6,33 +6,26 @@ import { SliceZone } from '@prismicio/react';
 import { createClient } from '@/prismicio';
 import { components } from '@/slices';
 import Layout from '@/components/Layout';
-import { getLocales } from '@/lib/utils/getLocales';
 
-type Params = { lang: string; uid: string };
+type Params = { uid: string };
 
 export default async function Page({ params }: { params: Promise<Params> }) {
-  const { lang, uid } = await params;
+  const { uid } = await params;
 
   const client = createClient();
-  const page = await client.getByUID('section', uid, { lang }).catch(() => notFound());
-
-  const pageLocales = await getLocales(page, client);
-  const localizedUrls =
-    pageLocales.length < 1
-      ? undefined
-      : pageLocales.reduce((acc, l) => ({ ...acc, [l.lang]: l.url }), {});
+  const page = await client.getByUID('section', uid).catch(() => notFound());
 
   return (
-    <Layout lang={lang} localizedUrls={localizedUrls}>
+    <Layout>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
-  const { lang, uid } = await params;
+  const { uid } = await params;
   const client = createClient();
-  const page = await client.getByUID('section', uid, { lang }).catch(() => notFound());
+  const page = await client.getByUID('section', uid).catch(() => notFound());
 
   return {
     title: page.data.meta_title,
